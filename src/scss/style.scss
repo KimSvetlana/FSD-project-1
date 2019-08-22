@@ -3,11 +3,14 @@
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
+
 @import "modules/header";
+@import "modules/footer";
 
-$fa-font-path: "../../fonts";
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+// @import '~/@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
+// $fa-font-path: "../../fonts";
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -97,6 +100,7 @@ section, .section {
   position: relative;
   padding-left: 140px;
   padding-right: 140px;
+  
 }
 .block-content{
   position: absolute;

@@ -1,4 +1,41 @@
 // footer style
 .page-footer{
-    padding: 104px 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 372px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    padding-right: 140px;
+    padding-left: 140px;
+    padding-top: 100px;
+}
+.footer-discription {
+    width: 260px;
+    float:left;
+}
+.footer-logo img {
+    margin-bottom: 20px;
+}
+.site-navigation {
+    display: grid;
+    flex-wrap: wrap;
+    grid-row-gap: 40px;
+
+    flex-basis: calc(100% - 290px);
+    grid-template-columns: repeat(4,1fr);
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.subscription input {
+    position: absolute;
+    width: 260px;
+    height: 44px;
+    left: 1040px;
+    top: 1108px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
 }
