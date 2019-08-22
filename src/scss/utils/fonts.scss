@@ -1,0 +1,12 @@
+// Fonts here
+
+// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-Regular.eot");
+    // src: url("../fonts/Montserrat/Montserrat.eot?#iefix")format("embedded-opentype"),
+    src: url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

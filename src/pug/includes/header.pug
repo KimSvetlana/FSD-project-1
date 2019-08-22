@@ -1,0 +1,24 @@
+include ../utils/mixins
+header.container(class= 'page-header')
+    .header-navigation
+        a.header-logo(href="/") 
+            img(src="assets/img/Logo.svg")
+        naw.main-navigation
+            ul.main-navigation-list
+                li.main-navigation-item
+                    a.main-nav-link(href="#") О нас
+                li.main-navigation-item
+                    a.main-nav-link(href="#") Услуги
+                li.main-navigation-item
+                    a.main-nav-link(href="#") Вакансии
+                li.main-navigation-item
+                    a.main-nav-link(href="#") Новости
+                li.main-navigation-item
+                    a.main-nav-link(href="#") Соглашения
+                        i.fa.fa-arrow-up(aria-hidden='true')
+            ul.user-navigation
+                li.login-link
+                    +button('transparent', 'https://google.ru', 'Войти' )
+                    //-a.button(class=['transparent'], href="#") Войти
+                li.registr
+                    a.button(class=['color-button'], href="#") Регистрация
