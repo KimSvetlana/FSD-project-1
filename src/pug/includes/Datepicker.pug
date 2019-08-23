@@ -2,12 +2,12 @@ include ../utils/mixins
 .login-form(class='datepicker')
     form
         h2 Найдём номера под ваши пожелания
-        .form-group
+        .form-group(class="date-heck-in")
             h3 прибытие
-            input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
-        .form-group
+            input(type="date" class="form-control heck-in" id="date" placeholder="ДД.ММ.ГГГГ")
+        .form-group(class="date-check-out")
             h3 выезд
-            input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
+            input(type="date" class="form-control check-out" id="date" placeholder="ДД.ММ.ГГГГ")
         .form-group
             h3 гости
             select(name="guests" class="form-control" id="guests" placeholder="Сколько гостей")

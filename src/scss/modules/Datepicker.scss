@@ -6,3 +6,16 @@
     top: -650px;
 }
 
+#date {
+    width: 150px;
+}
+.date-heck-in {
+    float: left;
+}
+.date-check-out {
+    float: right;
+}
+
+.datepicker.form-group:last-of-type {
+    margin-bottom: 31px;
+}
