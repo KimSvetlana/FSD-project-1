@@ -56,9 +56,11 @@
     margin-top: 42px;
 }
 .transparent-form {
-    position: absolute;
-    right: 30px;
-    bottom:32px;
+    // position: absolute;
+    // right: 30px;
+    // bottom:32px;
+    float: right;
+    margin-top: 30px;
     padding: 14px 19px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 

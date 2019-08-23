@@ -67,11 +67,11 @@ a.main-nav-link:hover{
 
 .transparent {
     position: absolute;
+    top: 18px;
     width: 87px;
     height: 34px;
+    padding: 9px 20px;
     margin-left: 44px;
-    // left: 997px;
-    top: 18px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
     /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
@@ -82,9 +82,10 @@ a.main-nav-link:hover{
 }
 .color-button {
     position: absolute;
+    top: 18px;
     width: 196px;
     height: 34px;
-    top: 18px;
+    padding: 9px 20px;
     margin-left: 151px;
     /* Primary Gradient */
 

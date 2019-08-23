@@ -1,0 +1,20 @@
+include ../utils/mixins
+.login-form(class='registration')
+    form
+        h2 Регистрация аккаунта
+        .form-group
+            input(type="text" class="form-control" id="name" placeholder="Имя")
+            input(type="text" class="form-control" id="surname" placeholder="Фамилия")
+        .form-group
+            h3 Дата рождения
+            input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
+        .form-group
+            h3 Данные для входа в сервис
+            input(type="email" class="form-control" id="email" placeholder="Email")
+            input(type="password" class="form-control" placeholder="Пароль")
+            p (!!!)Получать спецпредложения
+        
+        button(type="submit" class="button form-button" id="pay") перейти к оплате
+        
+    p Уже есть аккаунт на Toxin
+    +button('transparent-form', 'https://google.ru', 'Создать' )
