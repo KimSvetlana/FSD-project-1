@@ -8,11 +8,8 @@
 @import "modules/footer";
 @import "modules/LoginForm";
 @import "modules/accountRegistrationForm";
+@import "modules/Datepicker";
 
-@import '~@fortawesome/fontawesome-free/css/all.min.css';
-// @import '~/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-
-// $fa-font-path: "../../fonts";
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;

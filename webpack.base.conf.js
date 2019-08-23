@@ -36,37 +36,34 @@ module.exports = {
             test: /\.js$/,
             loader: 'babel-loader',
             exclude: '/node_modules/'
-        }, { 
-            test: /\.(png|jpg|gif)$/, 
-            use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-
-          
-        ],
-        }, {
+        }, 
+        
+        //{ 
+        //     test: /\.(png|jpg|gif)$/, 
+        //     use: [
+        //   {
+        //     loader: 'url-loader',
+        //     options: {
+        //       limit: 8192,
+        //     },
+        //   },  ],
+        {
             test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
             use: [{
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: 'fonts/',    // where the fonts will go
-                publicPath: '../'       // override the default path
+                // outputPath: 'fonts/',    // where the fonts will go
+                // publicPath: '../'       // override the default path
               }
             }]
-        },
-        
-        // {
-        //     test: /\.(png|jpg|gif)$/,
-        //     loader: 'file-loader',
-        //     options: {
-        //     name: '[name].[ext]'
-        //     }
-        // }, 
+        },  {
+             test: /\.(png|jpg|gif|svg)$/,
+             loader: 'file-loader',
+             options: {
+             name: '[name].[ext]'
+             }
+        }, 
         
         {
             test: /\.css$/,
