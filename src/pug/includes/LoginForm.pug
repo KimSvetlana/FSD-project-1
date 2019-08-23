@@ -1,0 +1,14 @@
+include ../utils/mixins
+.login-form
+    form
+        h2 Войти
+        .form-group
+            input(type="email" class="form-control" id="email" placeholder="Email")
+            input(type="password" class="form-control" placeholder="Пароль")
+        
+        button(type="submit" class="button form-button") Войти
+        
+    p Нет аккаунта на Toxin?
+    +button('transparent-form', 'https://google.ru', 'Создать' )
+
+        

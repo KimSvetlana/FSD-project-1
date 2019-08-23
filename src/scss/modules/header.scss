@@ -36,11 +36,15 @@
 .main-navigation-item:not(:first-child) {
     padding-left: 20px;
 }
-a.main-nav-link{
+a.main-nav-link {
     display:inline-block;
-    color: #1F2041;
+    color: rgba(31, 32, 65, 0.5);
     // font-size: 14px;
     line-height: 17px;
+}
+a.main-nav-link:hover{
+    // font-weight: bold;
+    color: #BC9CFF;
 }
 .#{fa-css-prefix}-fw {
     width: (18em / 14);
@@ -69,7 +73,7 @@ a.main-nav-link{
     // left: 997px;
     top: 18px;
     color: #BC9CFF;
-    border: 2px solid #BC9CFF;; 
+    border: 2px solid #BC9CFF; 
     /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
     border-radius: 22px;
 }

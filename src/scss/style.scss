@@ -6,6 +6,7 @@
 
 @import "modules/header";
 @import "modules/footer";
+@import "modules/LoginForm";
 
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 // @import '~/@fortawesome/fontawesome-free/scss/fontawesome.scss';
@@ -100,7 +101,7 @@ section, .section {
   position: relative;
   padding-left: 140px;
   padding-right: 140px;
-  
+
 }
 .block-content{
   position: absolute;
