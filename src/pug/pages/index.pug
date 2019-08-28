@@ -6,11 +6,11 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
-	img(src="assets/img/image 3.png")
 	div.container(class="page-content")
+		img(src="assets/img/image 3.png")
 		.block-content
 			p Лучшие номера для вашей работы, отдыха и просто вдохновения
-		
 			include ../includes/LoginForm
 			include ../includes/accountRegistrationForm
-			include ../includes/Datepicker
+		
+		include ../includes/Datepicker

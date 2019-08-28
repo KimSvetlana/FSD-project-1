@@ -34,6 +34,8 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  letter-spacing: 0px;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -97,15 +99,16 @@ section, .section {
 //
 .page-content {
   position: relative;
-  padding-left: 140px;
-  padding-right: 140px;
+  height:830px;
+  // padding-left: 140px;
+  // padding-right: 140px;
 
 }
 .block-content{
   position: absolute;
   width: 297px;
   height: 48px;
-  bottom: 18px;
+  bottom: 19px;
   // right: 0%;
   left: 1009px;
   // top: 834px;
