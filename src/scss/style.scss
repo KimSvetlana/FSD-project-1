@@ -9,6 +9,8 @@
 @import "modules/LoginForm";
 @import "modules/accountRegistrationForm";
 @import "modules/Datepicker";
+@import "modules/socialBar";
+@import "modules/index";
 
 html {
   line-height: $mainLineHeight;
@@ -67,9 +69,7 @@ section, .section {
 .wrapper {
   display: flex;
   flex-direction: column;
-  //???
   justify-content: space-between;
-  //??
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -96,31 +96,6 @@ section, .section {
     max-width: smPhoneWidth;
   }
 }
-//
-.page-content {
-  position: relative;
-  height:830px;
-  // padding-left: 140px;
-  // padding-right: 140px;
-
-}
-.block-content{
-  position: absolute;
-  width: 297px;
-  height: 48px;
-  bottom: 19px;
-  // right: 0%;
-  left: 1009px;
-  // top: 834px;
-}
-.block-content p {
-  font-size: 14px;
-  line-height: 24px;
-  /* or 171% */
-  text-align: right;
-
-}
-//
 
 // Modules
 // @import "modules/my-module.scss";

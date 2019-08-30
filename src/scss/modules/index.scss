@@ -1,0 +1,20 @@
+.page-content {
+    position: relative;
+    height:830px;
+    background: url(../img/image3.png) no-repeat;
+    background-position: center;
+    background-position-y: -70px;
+  }
+  .block-content{
+    position: absolute;
+    width: 297px;
+    height: 48px;
+    bottom: 19px;
+    left: 1009px;
+  }
+  .block-content p {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    text-align: right;
+}

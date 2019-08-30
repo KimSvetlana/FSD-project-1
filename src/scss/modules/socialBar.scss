@@ -1,0 +1,35 @@
+.footer-social-bar {
+    height: 70px;
+    border-top: 1px solid rgba(31, 32, 65, 0.25);
+    padding-left: 140px;
+    padding-right: 140px;
+    background-color: white;
+}
+.footer-copyright{
+    float: left;
+    margin-top: 26px;
+    color: rgba(31, 32, 65, 0.75);
+}
+.footer-social {
+    float:right;
+    margin-top: 23px;
+}
+.social-btn {
+    display: inline-block;
+    margin-right: 17px;
+    color:   #BC9CFF;
+}
+.social-btn:last-child {
+    margin-right: 0px;
+}
+.social-btn .fa {
+    margin-right: 0px;
+    font-size: 24px;
+    line-height: 23px;
+
+}
+
+.social-btn:hover {
+    // background-color:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.5;
+}
