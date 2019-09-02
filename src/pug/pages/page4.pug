@@ -2,13 +2,11 @@ extends ../layout/main
 
 block variables
 	- var title = 'Четвертая страница';
-	- var description = 'Описание сайта';
-	- var pageClass = 'index-page';
+	- var description = 'Регистрация';
+	- var pageClass = 'page4';
 
 block content
-	div.container(class="page-content")   
-		//-style ="background: url(../img/image3.png) no-repeat;")
-		//- img(src="assets/img/image 3.png")
+	div.container(class="page4-content")   
 		.block-content
 			include ../includes/LoginForm
 			include ../includes/accountRegistrationForm

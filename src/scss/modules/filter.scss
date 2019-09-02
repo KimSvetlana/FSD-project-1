@@ -1,0 +1,28 @@
+.catalog {
+    height: 1356px;
+    padding-left: 140px;
+    padding-right: 140px;
+    display: grid;
+    grid-template-columns: 266px 834px;
+    grid-gap: 60px; 
+}
+.date-dropdown {
+    width: 266px;
+    height: 44px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.filter {
+    grid-column: 1/2;
+}
+.sort {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    grid-column-gap: 12px;
+    grid-template-rows: repeat(4, 257px);
+    grid-row-gap: 21px;    
+}

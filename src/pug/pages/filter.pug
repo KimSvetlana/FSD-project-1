@@ -1,0 +1,25 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Вторая страница';
+	- var description = 'Описание сайта';
+	- var pageClass = 'filter-page';
+
+block content
+	.catalog    
+		.filter
+			.form-group
+				h3 гости
+				select(name="guests" class="date-dropdown" id="guests" placeholder="Сколько гостей")
+					option Взрослые
+					option Дети
+					option Младенцы
+		.sort
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
+			include ../includes/cardsRoom
