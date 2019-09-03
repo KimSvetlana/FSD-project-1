@@ -5,7 +5,20 @@
     left: 140px;
     top: 70px;
 }
-
+.datepicker form h2 {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.login-form h3 {
+    margin-bottom: 5px;
+}
+.datepicker-group:last-of-type {
+    margin-top: 105px;
+    margin-bottom: 31px;
+}
 #date {
     width: 150px;
 }
@@ -14,8 +27,4 @@
 }
 .date-check-out {
     float: right;
-}
-
-.datepicker.form-group:last-of-type {
-    margin-bottom: 31px;
 }

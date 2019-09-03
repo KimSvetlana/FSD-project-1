@@ -9,17 +9,19 @@ header.container(class= 'page-header')
                     a.main-nav-link(href="#") О нас
                 li.main-navigation-item
                     a.main-nav-link(href="#") Услуги
-                        i.fa.fa-angle-down(aria-hidden='true')
+                        i.material-icons keyboard_arrow_down
+                        //- i.fa.fa-angle-down(aria-hidden='true')
                 li.main-navigation-item
                     a.main-nav-link(href="#") Вакансии
                 li.main-navigation-item
                     a.main-nav-link(href="#") Новости
                 li.main-navigation-item
                     a.main-nav-link(href="#") Соглашения
-                        i.fa.fa-angle-down.fa-lg(aria-hidden='true')
+                        i.material-icons keyboard_arrow_down
+                        //- i.fa.fa-angle-down.fa-lg(aria-hidden='true')
             ul.user-navigation
                 li.login-link
-                    +button('transparent', 'https://google.ru', 'Войти' )
+                    +button('transparent', href="./page4.html", 'Войти' )
                     //-a.button(class=['transparent'], href="#") Войти
                 li.registr
-                    a.button(class=['color-button'], href="#") зарегистрироваться
+                    a.button.color-button(href="#") зарегистрироваться

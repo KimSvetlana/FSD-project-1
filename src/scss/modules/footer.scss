@@ -1,4 +1,3 @@
-// footer style
 .page-footer{
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +25,6 @@
     display: grid;
     flex-wrap: wrap;
     grid-row-gap: 40px;
-
     flex-basis: 860px;
     grid-template-columns: 200px 200px 200px 260px;
     margin-right: auto;
@@ -35,23 +33,19 @@
     margin-top:4px;
 }
 
-// .site-navigation-list:nth-child(2){
-//     //  margin-left:-150px;
-// }
-
 .site-navigation-item h2{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 21px;
-    /* identical to box height */
-
+    
     text-transform: uppercase;
     color: #1F2041;
 }
 .site-navigation-item li {
     margin-bottom: 21px;
+    line-height: 17px;
 }
 .site-navigation-item a {
     font-size: 14px;
@@ -74,14 +68,11 @@
     height: 44px;
     top: 208px;
     padding-left: 15px;
-    
-    // right: 140px;
-
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
     border-radius: 4px;
-
+    
     background: url(../img/arrow_forward.png) no-repeat 20px 20px;
     background-position: 227px center;
 }

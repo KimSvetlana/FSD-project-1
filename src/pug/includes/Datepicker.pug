@@ -2,13 +2,13 @@ include ../utils/mixins
 .login-form(class='datepicker')
     form
         h2 Найдём номера под ваши пожелания
-        .form-group(class="date-heck-in")
+        .datepicker-group(class="date-heck-in")
             h3 прибытие
             input(type="date" class="form-control heck-in" id="date" placeholder="ДД.ММ.ГГГГ")
-        .form-group(class="date-check-out")
+        .datepicker-group(class="date-check-out")
             h3 выезд
             input(type="date" class="form-control check-out" id="date" placeholder="ДД.ММ.ГГГГ")
-        .form-group
+        .datepicker-group
             h3 гости
             select(name="guests" class="form-control" id="guests" placeholder="Сколько гостей")
                 option Взрослые
@@ -16,4 +16,4 @@ include ../utils/mixins
                 option Младенцы
 
         
-        button(type="submit" class="button form-button") подобрать номер
+        a(type="submit" class="button form-button" href="./filter.html") подобрать номер
