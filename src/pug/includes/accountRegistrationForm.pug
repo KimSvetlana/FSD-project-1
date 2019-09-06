@@ -5,6 +5,12 @@ include ../utils/mixins
         .form-group
             input(type="text" class="form-control" id="name" placeholder="Имя")
             input(type="text" class="form-control" id="surname" placeholder="Фамилия")
+            .radio
+                input.radio__input(name="male" type="radio" id="radio_1")
+                label.radio__label(for="radio_1") Мужчина
+            .radio
+                input.radio__input(name="male" type="radio" id="radio_2")
+                label.radio__label(for="radio_2") Женщина
         .form-group
             h3 Дата рождения
             input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
@@ -12,7 +18,10 @@ include ../utils/mixins
             h3 Данные для входа в сервис
             input(type="email" class="form-control" id="email" placeholder="Email")
             input(type="password" class="form-control" placeholder="Пароль")
-            p (!!!)Получать спецпредложения
+            .custom-switch
+                input(type="checkbox" class="switch-input" id="customSwitch")
+                label(class="switch-label" for="customSwitch") Получать спецпредложения
+            //- p (!!!)Получать спецпредложения
         
         button(type="submit" class="button form-button" id="pay") перейти к оплате
         

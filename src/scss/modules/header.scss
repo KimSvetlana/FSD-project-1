@@ -52,19 +52,6 @@ a.main-nav-link:hover{
     margin-top: 9px;
    color: rgba(31, 32, 65, 0.5);
 }
-
-.fa{
-    margin-left: 8px;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-}
-.fa-angle-down-fw {
-    text-align: center;
-}
-// .user-navigation {
-    
-// }
 .button {
     display:inline-block;
     box-sizing: border-box;
@@ -83,7 +70,7 @@ a.main-nav-link:hover{
     width: 87px;
     height: 34px;
     padding: 7px 20px 10px;
-    margin-left: 22px;
+    margin-left: -2px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
     /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
@@ -98,7 +85,7 @@ a.main-nav-link:hover{
     width: 196px;
     height: 34px;
     padding: 9px 20px;
-    margin-left: 129px;
+    margin-left: 105px;
     /* Primary Gradient */
 
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
