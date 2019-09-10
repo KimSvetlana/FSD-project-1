@@ -9,8 +9,8 @@ html(lang='en')
     meta(name="description", content=description)
     link(rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-    block head
-
+    //- link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css")
+  block head
   body(class=pageClass)
     .wrapper
         include ../includes/header
@@ -19,4 +19,36 @@ html(lang='en')
         include ../includes/footer
         include ../includes/socialВаг
 
-    block script
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
+    script.
+      $('#dateFrom').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Bc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+      });
+      var monthNames = $( "#dateFrom" ).datepicker( "option", "monthNames" );
+      $( "#dateFrom" ).datepicker( "option", "monthNames", [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ] );
+      
+      $('#dateTo').datepicker({
+        inline: true,
+        firstDay: 1,
+        showOtherMonths: true,
+        dayNamesMin: ['Bc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+      });
+      var monthNames = $( "#dateTo" ).datepicker( "option", "monthNames" );
+      $( "#dateTo" ).datepicker( "option", "monthNames", [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ] );
+
+      var dates = $("#dateFrom, #dateTo").datepicker({
+        onSelect: function(selectedDate){
+          var option = this.id == "from" ? "minDate" : "maxDate",
+          instance = $( this ).data( "datepicker" ),
+          date = $.datepicker.parseDate(
+          instance.settings.dateFormat || $.datepicker._defaults.dateFormat,
+          selectedDate, instance.settings);
+          dates.not(this).datepicker("option", option, date);
+        }
+      });
+  
+  //- block script

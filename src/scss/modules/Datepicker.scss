@@ -1,5 +1,5 @@
 .calendar{
-    display: inline;
+    display: none;
 }
 .ui-datepicker,
 .ui-datepicker table,
@@ -17,13 +17,123 @@
     width: 320px;
     height: 369px;
     cursor: default;
-   
+
+    margin-top: 5.56px;
+    padding-left: 22px;
+    padding-right: 20px;
     
     font-family: 'Montserrat';
     font-size: 12px;
     line-height: 15px;
+    color: rgba(31, 32, 65, 0.5);
     
     background:#FFFFFF;;
+    border: 1px solid rgba(31, 32, 65, 0.25);
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
+}
+
+.ui-datepicker-header {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+}
+.ui-datepicker-title { 
+    text-align: center; 
+}
+
+.ui-datepicker-month {
+    color: #1F2041;
+}
+.ui-datepicker-year {
+    color: #1F2041;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+ position: absolute;
+ top: -2px;
+ padding: 5px;
+ cursor: pointer;
+}
+
+.ui-datepicker-prev {
+ left:0px;
+ padding-left: 0;
+}
+
+.ui-datepicker-next {
+ right: 0px;
+ padding-right: 0;
+}
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span{
+ display: block;
+ width: 24px;
+ height: 24px;
+ text-indent: -9999px;
+
+ background: url(../img/arrow_forward.png) no-repeat 0px 0px; ;
+}
+.ui-datepicker-prev span {
+    background: url(../img/arrow_back.png) no-repeat 0px 0px;
+}
+
+.ui-datepicker-calendar th {
+    padding: 10px;
+    padding-bottom: 12px;
+    font-family: Montserrat;
+    font-weight: 700;
+    color:#BC9CFF;
    }
+
+.ui-datepicker-calendar td {   
+    text-align: center;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    padding-top: 12px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    outline: none;
+   
+    text-decoration: none;
+    
+   
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.ui-datepicker-calendar .ui-datepicker-today{
+    color: #FFFFFF;
+    font-weight: bold;
+    background:linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+   }
+
+.ui-datepicker-calendar .ui-state-active {
+    color: #FFFFFF;
+        font-weight: bold;
+        background:linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+}
+.ui-datepicker-other-month .ui-state-default { 
+    color: rgba(31, 32, 65, 0.25);
+}
