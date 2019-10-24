@@ -1,38 +1,70 @@
 .cards {
-    // position: absolute;
-    // left: 140px;
-    // top:  -350px;
-
     width: 270px;
     height: 257px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
 }
-.photo-room {
-    height:151px;
-    margin-bottom: 20px;
+
+.carousel-indicators {
+    bottom: 15px;
+    right: 15px;
+    z-index: 20;
+    font-size: 0;
+
+    margin-right: 0; 
+    margin-left: 0;
+    justify-content: flex-end;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: white;
+}
+.carousel-indicators li {
+    box-sizing: border-box;
+    background-clip: border-box;
+    margin-right: 0px;
+    margin-left: 0px;
+    
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    opacity: 1;
+    
+}
+.carousel-indicators li:not(:last-child){
+    margin-right: 3.75px;
+}
+
+.carousel-inner {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    background: url(../img/imageRoom.jpg) no-repeat;
-    background-position: center;
-    
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 16%
+}
+
+.carousel-control-next i,
+.carousel-control-prev i {
+ color: white;
+ margin-top: -1px;
 }
 
 .number-and-cost,
 .rating-and-reviews {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.number-and-cost {
+    height: 54px;
+    padding-top: 20px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
 .number-and-cost p.number {
     float: left;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-}
-.number-and-cost span {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -42,8 +74,30 @@
     text-transform: uppercase;
     color: #BC9CFF;
 }
+
+.number-and-cost span.number-room {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    color:#1F2041;
+    
+    font-size: 19px;
+    line-height: 24px;
+    
+    margin-left: 3px;
+}
 .number-and-cost p.cost {
     float: right;
+    padding-top: 5px;
+    font-family: Montserrat;
+    font-size: 12px;
+    // font-style: normal;
+    // font-weight: bold;
+    // font-size: 14px;
+    // line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.number-and-cost span.room-cost {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -52,18 +106,23 @@
     color: rgba(31, 32, 65, 0.5);
 }
 .rating-and-reviews .rating {
+    margin-top: 12px;
     float: left;
 }
-.fa.fa-star {
+.rating-and-reviews .rating i.material-icons{
     color:#BC9CFF;
 }
 .rating-and-reviews p.reviews{
     float: right;
+    margin-top: 13px;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: bold;
+    // font-weight: bold;
     font-size: 14px;
     line-height: 18px;
     text-align: right;
     color: rgba(31, 32, 65, 0.5);
+}
+.rating-and-reviews span.room-reviews{
+    font-weight: bold;
 }
