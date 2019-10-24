@@ -1,2 +1,40 @@
 mixin button(class_, href_, name_)
     a.button(class=class_ href=href_) #{name_}
+
+mixin checkbox(id_, for_, content, discription, checked_)
+    .checkbox
+        input.checkbox-input(type="checkbox", id=id_, checked=checked_)
+        label.checkbox-label(for=for_) #{content}
+        p #{discription}
+
+mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
+    .cards
+        .carousel.slide(id="slides" data-ride="carousel")
+            ol.carousel-indicators
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+                <li data-target="#slides" data-slide-to="3"></li>
+            .carousel-inner
+                .carousel-item.active
+                    img(src=img_0)
+                //- .carousel-item
+                //-      img(src=img_1)
+                //- .carousel-item
+                //-      img(src=img_2)
+                //- .carousel-item
+                //-      img(src=img_3)
+            a.carousel-control-prev(href="#slides" role="button" data-slide="prev")
+                i.material-icons keyboard_arrow_left
+            a.carousel-control-next(href="#slides" role="button" data-slide="next")
+                i.material-icons keyboard_arrow_right    
+        .number-and-cost
+            p.number № <span class = "number-room">#{number}</span> #{lux}
+            p.cost  <span class= "room-cost">#{cost}</span> в сутки 
+        .rating-and-reviews
+            .rating
+                - for (var x = ratingStars; x < 5; x++)
+                    i.material-icons star_border     
+                - for (var x = 0; x < ratingStars; x++)
+                    i.material-icons star
+            p.reviews <span class= "room-reviews">#{reviews}</span> Отзывов

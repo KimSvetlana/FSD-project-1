@@ -1,6 +1,42 @@
+.filter-group{
+    margin-top: 30px;
+}
+.filter-group.datepicker {
+    margin-top: 0px;
+    margin-bottom: 20px
+}
+.filter-group.guests {
+    margin-top: 0px;
+    margin-bottom: 30px
+}
+h3 {   
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+
+    text-transform: uppercase;
+
+    color: #1F2041;
+    margin-bottom: 16px;
+}
+.datepicker h3,
+.guests h3{
+    margin-bottom: 5px;
+}
+.filter-group.checkbox-1 h3,
+.filter-group.checkbox-2 h3 {
+    margin-bottom: 16px;
+}
+// .filter-group.checkbox-1{
+//     margin-top: 30px;
+// }
+.filter-group.checkbox-2{
+    margin-top: 18px;
+}
 .checkbox {
     position: relative;
-    margin-bottom: 1rem;
 }
 
 .checkbox-input {
@@ -10,12 +46,15 @@
 }
 
 .checkbox-label {
-    padding-left: 45px;
+    padding-left: 30px;
+    margin-bottom: 12px;
 
-    font-size: 1rem;
+    font-size: 14px;
+    line-height: 18px;
     color:rgba(31, 32, 65, 0.5);
     cursor: pointer;
 }
+
 .checkbox-label:before {
     content: "";
     display: block;
@@ -59,6 +98,37 @@
     opacity: 1;
 }
 
+.filter-group.checkbox-2 label{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-bottom: 6px;
+}
+.filter-group.checkbox-2 p {
+    margin-left: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+}
+.filter-group.checkbox-2 .checkbox {
+    margin-bottom: 10px;
+}
+
+.filter-group.comfort h3{
+    margin-bottom: 4px;
+}
+
+.date-dropdown {
+    width: 266px;
+    height: 44px;
+            
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
 .catalog {
     height: 1356px;
     padding-left: 140px;
@@ -66,24 +136,166 @@
     display: grid;
     grid-template-columns: 266px 834px;
     grid-gap: 60px; 
-}
-.date-dropdown {
-    width: 266px;
-    height: 44px;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    box-sizing: border-box;
-    border-radius: 4px;
+    padding-top: 30px;
 }
 .filter {
     grid-column: 1/2;
 }
-.sort {
+.room-list {
     grid-column: 2/3;
+}
+.room-list h1 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #1F2041;
+    margin-bottom: 21px;
+}
+.sort {
     display: grid;
     grid-template-columns: repeat(3, 270px);
     grid-column-gap: 12px;
     grid-template-rows: repeat(4, 257px);
     grid-row-gap: 21px;    
 }
+
+// #slider-range {
+// 	width: 100%;
+// }
+// /* Контейнер слайдера */
+// .ui-slider {
+// 	position: relative;
+// }
+// /* Ползунок */
+// .ui-slider .ui-slider-handle {
+// 	position: absolute;
+// 	z-index: 2;
+// 	width: 12px;   /* Задаем нужную ширину */
+// 	height: 12px;  /* и высоту */
+// 	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+//     border: 2px solid #FFFFFF;
+//     border-radius: 10px; 
+//     cursor: pointer;
+// }
+// .ui-slider .ui-slider-range {
+// 	position: absolute;
+// 	z-index: 1;
+// 	font-size: .7em;
+// 	display: block;
+// 	border: 0;
+// 	overflow: hidden;
+// }
+// /* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+// .ui-slider-horizontal {
+//     height: 6px; /* задаем высоту согласно дизайна */
+// }
+// /* позиционируем ползунки */
+// .ui-slider-horizontal .ui-slider-handle { 
+// 	top: -4px;
+// 	margin-left: -6px;
+// }
+// .ui-slider-horizontal .ui-slider-range {
+// 	top: 0;
+// 	height: 100%;
+// }
+// .ui-slider-horizontal .ui-slider-range-min { 
+// 	left: 0;
+// }
+// .ui-slider-horizontal .ui-slider-range-max {
+//     right: 0;
+// }
+// /* оформление полосы по которой ходит ползунок */
+// .ui-widget-content { 
+// 	background: #FFFFFF;
+//     border: 1px solid rgba(31, 32, 65, 0.25);
+// }
+
+// /* оформление активного участка (между двумя ползунками) */
+// .ui-slider .ui-widget-header { 
+//     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); 
+//     border-radius: 3px;
+// }
+// /* скругление для полосы слайдера */
+// .ui-corner-all {
+// 	-moz-border-radius: 4px;
+// 	-webkit-border-radius: 4px;
+// 	border-radius: 3px;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+/*	=	Select */
+// .slct {
+// 	display: block;
+// 	border-radius: 5px;
+// 	border: 1px solid #cecece;
+// 	background-color: #F6F6f6;
+// 	width: 285px;
+// 	padding: 4px 15px 4px 10px;
+// 	color: #444;
+// 	background-position: 290px -145px;
+
+// 	/*
+// 		Супер финт обрезаем текст
+// 		чтобы не вылезал за рамку
+// 	*/
+// 	overflow: hidden;
+// 	white-space:nowrap;
+// 	text-overflow: ellipsis;
+// 	-o-text-overflow: ellipsis;	
+
+// }
+// .slct.active {
+// 	border-radius: 5px 5px 0 0;
+// 	border-bottom: none;
+// }
+// .drop {
+// 	margin: 0;
+// 	padding: 0;
+// 	width: 310px;
+// 	border: 1px solid #cecece;
+// 	border-top: none;
+// 	display: none;
+// 	position: absolute;
+// 	background: #fff;
+// }
+// .drop li {
+// 	list-style: none;
+// 	border-top: 1px dotted #e8e8e8;
+// 	cursor: pointer;
+// 	display: block;
+// 	color: #444;
+// 	padding: 4px 15px 4px 25px;
+// 	background-position: 10px -119px;
+// }
+// .drop li:hover {
+// 	background-color: #e8e8e8;
+//     color: #222;
+// }
+
+.expandable-checkbox-list {
+    list-style: none;
+}
+  
+.expandable-checkbox-list .sub-menu {
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin-top: 17.44px;
+}
+  
+  
+// .expandable-checkbox-list> li:hover .sub-menu {
+//     display: block;
+// }

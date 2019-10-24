@@ -1,8 +1,9 @@
 //- include ../utils/mixins
+
 block variables
 
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     meta(charset='utf-8')
     title #{title}
@@ -10,6 +11,9 @@ html(lang='en')
     link(rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     //- link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+
+
   block head
   body(class=pageClass)
     .wrapper
@@ -50,5 +54,117 @@ html(lang='en')
           dates.not(this).datepicker("option", option, date);
         }
       });
+
+    script(src="https://code.jquery.com/jquery-1.12.4.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    script.
+      $( function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          step: 500,
+          min: 500,
+          max: 15000,
+          values: [ 5000, 10000 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( ui.values[ 0 ] + "₽ - " + ui.values[ 1 ] + "₽");
+          }
+        });
+        $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+          "₽ - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
+      } );
+    
+    //-   /* Select */
+    //- script.
+    //-   $('.slct').click(function(){
+    //-     /* Заносим выпадающий список в переменную */
+    //-     var dropBlock = $(this).parent().find('.drop');
+        
+    //-     /* Делаем проверку: Если выпадающий блок скрыт то делаем его видимым*/
+    //-     if( dropBlock.is(':hidden') ) {
+    //-       dropBlock.slideDown();
+          
+    //-       /* Выделяем ссылку открывающую select */
+    //-       $(this).addClass('active');
+          
+    //-       /* Работаем с событием клика по элементам выпадающего списка */
+    //-       $('.drop').find('li').click(function(){
+            
+    //-         /* Заносим в переменную HTML код элемента списка по которому кликнули */
+    //-         var selectResult = $(this).html();
+            
+    //-         /* Находим наш скрытый инпут и передаем в него значение из переменной selectResult */
+    //-         $(this).parent().parent().find('input').val(selectResult);
+            
+    //-         /* Передаем значение переменной selectResult в ссылку которая открывает наш выпадающий список и удаляем активность */
+    //-         $(this).parent().parent().find('.slct').removeClass('active').html(selectResult);
+            
+    //-         /* Скрываем выпадающий блок */
+    //-         dropBlock.slideUp();
+    //-         });
+          
+    //-       /* Продолжаем проверку: Если выпадающий блок не скрыт то скрываем его */
+    //-     } else {
+    //-       $(this).removeClass('active');
+    //-       dropBlock.slideUp();
+    //-     }
+        
+    //-     /* Предотвращаем обычное поведение ссылки при клике */
+    //-     return false;
+    //-   });
+
+   
+    script.
+      $('.expandable-checkbox-list > li').on('click', function(e){
+      /* внутри нашего пункта меню находим "выпадашку" */
+        var $dropMenu = $(this).parent().find('.sub-menu');
+      /* если наш dropMenu видимый - скрываем, если скрыт - показываем */
+      if($dropMenu.is(':visible')){
+        $dropMenu.hide();
+      } else {
+         /* скрываем все видимые "выпадашки" на странице */
+        $('.dropMenu:visible').hide(); 
+        $dropMenu.show();
+      }
+      });
+    
+    script.
+      window.onload = function(){
+        var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
+        $('.cdp_i').on('click', function(){
+          var go = $(this).attr('href').replace('#!', '');
+          if (go === '+1') {
+            paginationPage++;
+          } else if (go === '-1') {
+            paginationPage--;
+          }else{
+            paginationPage = parseInt(go, 10);
+          }
+        $('.cdp').attr('actpage', paginationPage);
+        });
+      };
+  
+    script.
+      $(function() {
+        (function quantityProducts() {
+          var $quantityArrowMinus = $(".quantity-arrow-minus");
+          var $quantityArrowPlus = $(".quantity-arrow-plus");
+
+          $quantityArrowMinus.click(quantityMinus);
+          $quantityArrowPlus.click(quantityPlus);
+
+          function quantityMinus() {
+            var $quantityNum = $(this).parent().find(".quantity-num");
+            if ($quantityNum.val() > 1) {
+              $quantityNum.val(+$quantityNum.val() - 1);
+            }
+          }
+
+          function quantityPlus() {
+            var $quantityNum = $(this).parent().find(".quantity-num");
+            $quantityNum.val(+$quantityNum.val() + 1);
+          }
+        })();
+      });
+      
   
   //- block script

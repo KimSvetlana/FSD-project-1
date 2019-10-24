@@ -1,4 +1,5 @@
 extends ../layout/main
+include ../utils/mixins
 
 block variables
 	- var title = 'Вторая страница';
@@ -6,25 +7,75 @@ block variables
 	- var pageClass = 'filter-page';
 
 block content
-	.catalog    
+	.container.catalog  
 		.filter
-			.form-group
+			.filter-group.datepicker
+				h3 даты пребывания в отеле
+				input(type="text" class="form-control сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+			.filter-group.guests
 				h3 гости
-				select(name="guests" class="date-dropdown" id="guests" placeholder="Сколько гостей")
-					option Взрослые
-					option Дети
-					option Младенцы
-			.form-group
+				include ../includes/dropdown		
+				//- div.select
+				//- 	<a href="javascript:void(0);" class="slct">Сколько гостей</a>
+				//- 	<ul class="drop">
+				//- 		<li><a href="">Взрослые</a>
+				//- 			<input type="number">
+				//- 		</li>
+				//- 		<li><a href="">Дети</a></li>
+				//- 		<li><a href="">Младенцы</a></li>
+				//- 	</ul>
+				//- 	<input type="hidden" id="select" />
+
+			.filter-group.cost
+				include ../includes/sliderRange
+			.filter-group.checkbox-1
 				h3 Checkbox Buttons
-				.checkbox
-					input.checkbox-input(type="checkbox" id="checkbox-1")
-					label.checkbox-label(for="checkbox-1") Можно курить
-		.sort
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
-			include ../includes/cardsRoom
+				+checkbox("checkbox-1", "checkbox-1", "Можно курить", "")
+				+checkbox("checkbox-2", "checkbox-2", "Можно с питомцами", "", "checked")
+				+checkbox("checkbox-3", "checkbox-3", "Можно пригласить гостей (до 10 человек)", "", "checked")
+			.filter-group.checkbox-2
+				h3 Доступность
+				+checkbox("checkbox-4", "checkbox-4", "Широкий коридор", " Ширина коридоров в номере не менее 91 см.")
+				+checkbox("checkbox-5", "checkbox-5", "Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
+			.filter-group.comfort
+				h3 удобства номера
+				include ../includes/dropdown
+			.filter-group
+				ul.expandable-checkbox-list
+					li
+						h3 дополнительные удобства
+						ul.sub-menu
+							<li>
+								+checkbox("checkbox-6", "checkbox-6", "Завтрак")
+							<li>
+								+checkbox("checkbox-7", "checkbox-7", "Письменный стол")
+							<li>
+								+checkbox("checkbox-8", "checkbox-8", "Стул для кормления")
+							<li>
+								+checkbox("checkbox-9", "checkbox-9", "Кроватка")
+							<li>
+								+checkbox("checkbox-10", "checkbox-10", "Телевизор")
+							<li>
+								+checkbox("checkbox-11", "checkbox-11", "Шампунь")
+							<li>
+								+checkbox("checkbox-12", "checkbox-12", "Телевизор")
+							<li>
+								+checkbox("checkbox-13", "checkbox-13", "Шампунь")
+						</ul>
+					</li>
+		.room-list
+			h1 Номера, которые мы для вас подобрали
+			.sort
+				+cardsRoom("./assets/img/imageRoom0.jpg", "840", "9 990₽", "145", "люкс", 5)
+				+cardsRoom("./assets/img/imageRoom2.jpg", "840", "9 900₽", "65", "", 4)
+				+cardsRoom("./assets/img/imageRoom3.jpg", "980", "8 500₽", "35", "люкс", 3)
+				+cardsRoom("./assets/img/imageRoom4.jpg", "856", "7 300₽", "19", "", 5)
+				+cardsRoom("./assets/img/imageRoom5.jpg", "740", "6 000₽", "44", "", 4)
+				+cardsRoom("./assets/img/imageRoom6.jpg", "982", "5 800₽", "56", "", 3)
+				+cardsRoom("./assets/img/imageRoom7.jpg", "678", "5 500₽", "45", "", 5)
+				+cardsRoom("./assets/img/imageRoom8.jpg", "450", "5 300₽", "39", "", 4)
+				+cardsRoom("./assets/img/imageRoom9.jpg", "350", "5 000₽", "77", "", 3)
+				+cardsRoom("./assets/img/imageRoom10.jpg", "666", "5 000₽", "25", "", 5)
+				+cardsRoom("./assets/img/imageRoom11.jpg", "444", "5 000₽", "15", "", 3)
+				+cardsRoom("./assets/img/imageRoom12.jpg", "352", "5 000₽", "55", "", 3)
+			include ../includes/pagination
