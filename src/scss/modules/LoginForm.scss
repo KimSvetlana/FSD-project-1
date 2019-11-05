@@ -46,34 +46,7 @@
 .form-group input:first-of-type {
     margin-bottom: 10px;
 }
-.form-button {
-     width: 100%;
-     padding: 14px 20px;
-    /* Primary Gradient */
-    
-    // background-image: url(../img/arrow_forward.png);   // no-repeat 20px 20px;
-    // background-position: 227px center;
-
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-}
-.form-button:hover{
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    opacity: 0.5;
-}
 .login-form p {
     float: left;
     margin-top: 42px;
-}
-.transparent-form {
-    float: right;
-    margin-top: 30px;
-    padding: 13px 17px;
-    color: #BC9CFF;
-    border: 2px solid #BC9CFF; 
-    /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
-    border-radius: 22px;
-}
-.transparent-form:hover{
-    opacity: 0.5;
 }

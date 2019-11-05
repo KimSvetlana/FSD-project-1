@@ -1,0 +1,63 @@
+.button {
+    display:inline-block;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 14px 20px;
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   border-radius: 22px;
+}
+.form-button:hover{
+   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   opacity: 0.5;
+}
+.transparent-form {
+    float: right;
+    margin-top: 30px;
+    padding: 13px 17px;
+    color: #BC9CFF;
+    border: 2px solid #BC9CFF; 
+        /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
+    border-radius: 22px;
+}
+.transparent-form:hover{
+    opacity: 0.5;
+}
+.transparent {
+    position: absolute;
+    top: 18px;
+    width: 87px;
+    height: 34px;
+    padding: 7px 20px 10px;
+    margin-left: -2px;
+    color: #BC9CFF;
+    border: 2px solid #BC9CFF; 
+    /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
+    border-radius: 22px;
+}
+.transparent:hover{
+    opacity: 0.5;
+}
+.color-button {
+    position: absolute;
+    top: 18px;
+    width: 196px;
+    height: 34px;
+    padding: 9px 20px;
+    margin-left: 105px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+}
+.color-button:hover{
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    opacity: 0.5;
+}

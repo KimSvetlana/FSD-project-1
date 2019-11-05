@@ -14,7 +14,5 @@ include ../utils/mixins
             select(name="guests" class="form-control" id="guests" placeholder="Сколько гостей")
                 option Взрослые
                 option Дети
-                option Младенцы
-
-        
-        a(type="submit" class="button form-button" href="./filter.html") подобрать номер
+                option Младенцы        
+        +button('form-button', "./filter.html", 'подобрать номер', 'arrow_forward' )

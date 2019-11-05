@@ -1,5 +1,6 @@
-mixin button(class_, href_, name_)
-    a.button(class=class_ href=href_) #{name_}
+mixin button(class_, href_, content, icons)
+    a.button(class=class_ href=href_) #{content}
+        i.material-icons #{icons}
 
 mixin checkbox(id_, for_, content, discription, checked_)
     .checkbox
