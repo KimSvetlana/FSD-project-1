@@ -1,13 +1,17 @@
-
-.dropdown
-    .mainmenubtn Удобства
+.select
+    .slct 
+        p Сколько гостей 
+        i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
     .dropdown-child
         .dropdown-item
-            p Спальни
+            p Взрослые
             include ../includes/quantityBlock
         .dropdown-item
-            p Кровати
+            p   Дети
             include ../includes/quantityBlock
         .dropdown-item
-            p Ванные комнаты
+            p Младенцы
             include ../includes/quantityBlock
+    <input type="hidden" id="select" />
+
+    //- a href="javascript:void(0);

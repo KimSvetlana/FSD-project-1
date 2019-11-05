@@ -1,0 +1,104 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Страиница пять';
+	- var description = 'Регистрация';
+	- var pageClass = 'page4';
+
+block content
+	div.container.room-details(class="page5-content")
+		.foto-room
+			.foto-left
+			.foto-right
+				.foto-right-1
+				.foto-right-2
+		.room-content
+			.infornation
+				.room-details-card
+					h3 Сведения о номере
+					.comfort
+						i.material-icons mood
+						h6 Комфорт
+						p Шумопоглощающие стены
+					.convenience
+						i.material-icons location_city
+						h6 Удобство
+						p Окно в каждой из спален
+					.cosiness
+						i.material-icons whatshot
+						h6 Уют
+						p Номер оснащён камином
+				.impression
+					h3 Впечатления от номера
+					ul
+						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+								<circle cx="5" cy="5" r="5" fill="url(#paint0_linear)"/>
+								<defs>
+									<linearGradient id="paint0_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#FFE39C"/>
+										<stop offset="1" stop-color="#FFBA9C"/>
+									</linearGradient>
+								</defs>
+								</svg> Великолепно
+						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+							<circle cx="5" cy="5" r="5" fill="url(#paint1_linear)"/>
+							<defs>
+								<linearGradient id="paint1_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#6FCF97"/>
+									<stop offset="1" stop-color="#66D2EA"/>
+								</linearGradient>
+							</defs>
+							</svg>Хорошо
+						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+							<circle cx="5" cy="5" r="5" fill="url(#paint2_linear)"/>
+							<defs>
+								<linearGradient id="paint2_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BC9CFF"/>
+									<stop offset="2" stop-color="#8BA4F9"/>
+								</linearGradient>
+							</defs>
+							</svg> Удовлетворительно
+						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+							<circle cx="5" cy="5" r="5" fill="url(#paint3_linear)"/>
+							<defs>
+								<linearGradient id="paint3_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#919191"/>
+									<stop offset="1" stop-color="#3D4975"/>
+								</linearGradient>
+							</defs>
+							</svg> Разочарован
+				.reviews
+					h3 Отзывы посетителей номера
+					.reviews-list
+						blockquote(class="review-item")
+							include ../includes/likeButton
+							.review-author
+								h6 Мурад Сарафанов
+								p 5 дней назад
+							p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей
+						blockquote(class="review-item")
+							include ../includes/likeButton
+							.review-author
+								h6 Патрисия Стёклышкова
+								p Неделю назад
+							p Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+				.rule-box
+					.rules
+						h3 Правила
+						ul
+							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
+								</svg> Нельзя с питомцами
+							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
+								</svg> Без вечеринок и мероприятий
+							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
+								</svg> Время прибытия — после 13:00, а выезд до 12:00
+					.repeal
+						h3 Отмена
+						p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+		  			
+
+			.info-card
+				include ../includes/infoCard

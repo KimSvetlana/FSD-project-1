@@ -1,0 +1,35 @@
+.infoCard
+    .number-of-room
+        p.number № <span class = "number-room">888</span> <span class = "lux">люкс</span>
+        p.cost  <span class= "room-cost">9 990 ₽</span> в сутки 
+    .datepicker-group(class="date-сheck-in")
+        h3 прибытие
+        input(type="text" class="form-control сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+    .datepicker-group(class="date-check-out")
+        h3 выезд
+        input(type="text" class="form-control check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
+    .guests
+        h3 гости
+        include ../includes/dropdown
+    .table-cost
+        table
+            tr
+                td.services 9 990₽ х 4 суток
+                td
+                td.sum 39960₽
+            tr
+                td.services Сбор за услуги: скидка 2 179₽
+                td 
+                    a.info(href = "#") i
+                td.sum 0₽
+            tr
+                td.services  Сбор за дополнительные услуги
+                td
+                    a.info(href = "#") i
+                td.sum  300₽
+        table.results
+            tr
+                th Итого
+                th.border-results
+                th.sum 38081₽
+    button(type="submit" class="button form-button") забронировать	

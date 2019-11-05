@@ -13,6 +13,9 @@
 }
 
 .ui-datepicker {
+    position: absolute;
+    z-index: 150;
+    
     display: none;
     width: 320px;
     height: 369px;

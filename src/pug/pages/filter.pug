@@ -40,7 +40,7 @@ block content
 			.filter-group.comfort
 				h3 удобства номера
 				include ../includes/dropdown
-			.filter-group
+			.filter-group.checkbox-list(id = "container-list")
 				ul.expandable-checkbox-list
 					li
 						h3 дополнительные удобства
@@ -63,10 +63,14 @@ block content
 								+checkbox("checkbox-13", "checkbox-13", "Шампунь")
 						</ul>
 					</li>
+					li 
+				i.material-icons.checkbox-list(id = "checkbox-icon") expand_more
+					
 		.room-list
 			h1 Номера, которые мы для вас подобрали
 			.sort
-				+cardsRoom("./assets/img/imageRoom0.jpg", "840", "9 990₽", "145", "люкс", 5)
+				//- include ../includes/cardsRoom
+				+cardsRoom("./assets/img/imageRoom0.jpg", "888", "9 990₽", "145", "люкс", 5)
 				+cardsRoom("./assets/img/imageRoom2.jpg", "840", "9 900₽", "65", "", 4)
 				+cardsRoom("./assets/img/imageRoom3.jpg", "980", "8 500₽", "35", "люкс", 3)
 				+cardsRoom("./assets/img/imageRoom4.jpg", "856", "7 300₽", "19", "", 5)

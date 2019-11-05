@@ -19,10 +19,11 @@
 @import "modules/dropdown";
 @import "modules/quantityBlock";
 @import "modules/sliderRange";
+@import "modules/roomDetails";
+@import "modules/infoCard";
+@import "modules/likeButton";
 
-
-@import "modules/jquery.formstyler.css";
-@import "modules/jquery.formstyler.theme.css";
+@import url(http://allfont.ru/allfont.css?fonts=quicksand-bold);
 
 html {
   // line-height: $mainLineHeight;

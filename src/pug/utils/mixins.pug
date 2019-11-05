@@ -9,6 +9,7 @@ mixin checkbox(id_, for_, content, discription, checked_)
 
 mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
     .cards
+        a.cards-link(href="./roomDetails.html")
         .carousel.slide(id="slides" data-ride="carousel")
             ol.carousel-indicators
                 <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -29,7 +30,7 @@ mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
             a.carousel-control-next(href="#slides" role="button" data-slide="next")
                 i.material-icons keyboard_arrow_right    
         .number-and-cost
-            p.number № <span class = "number-room">#{number}</span> #{lux}
+            p.number № <span class = "number-room">#{number}</span> <span class = "lux">#{lux}</span>
             p.cost  <span class= "room-cost">#{cost}</span> в сутки 
         .rating-and-reviews
             .rating
@@ -37,4 +38,4 @@ mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
                     i.material-icons star_border     
                 - for (var x = 0; x < ratingStars; x++)
                     i.material-icons star
-            p.reviews <span class= "room-reviews">#{reviews}</span> Отзывов
+            p.reviews-number <span class= "room-reviews">#{reviews}</span> Отзывов

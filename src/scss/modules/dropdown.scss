@@ -1,57 +1,72 @@
-.mainmenubtn {
-   
+.slct {
+	display: block;
     box-sizing: border-box;
-    cursor: pointer;
-    color: rgba(31, 32, 65, 0.75);;
-    width: 266px;
+	border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+ 	width: 266px;
     height: 44px;
-    
-    background: #FFFFFF;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 12px;
+
+    /*обрезаем текст чтобы не вылезал за рамку*/
+ 	overflow: hidden;
+ 	white-space:nowrap;
+ 	text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;	
+
 }
-    
-.dropdown {
-    // position: relative;
-    display: inline-block;
+.slct p {
+    float: left;
 }
+.material-icons.dropdown-icon{
+    transform: rotate(0deg);
+    transition: transform 0.5s linear;
+}
+.material-icons.dropdown.open{
+    transform: rotate(180deg);
+    transition: transform 0.5s linear;
+}
+.slct.active {
+ 	border-radius: 4px 4px 0 0;
+ 	border-bottom: none;
+ }
 .dropdown-child {
-    cursor: pointer;
     display: none;
-    // display: block;
-    box-sizing: border-box;
+    position: absolute;
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
     width: 266px;
     height: 119px;
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-
     padding: 7px 7px 7px 15px;
+    background-color: white;
+    z-index: 150;
 }
 .dropdown-item {
-    padding:0px;
-    height: 30px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-
-    text-transform: uppercase;
-    color: #1F2041;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-item:not(:last-of-type){
-    margin-bottom: 7px;
-}
-.dropdown-item p{
-    float: left;
-}
-.dropdown-item .quantity-block{
-    float: right;
-}
-.dropdown:hover .dropdown-child {
-    display: block;
-}
+        padding:0px;
+        height: 30px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    
+        text-transform: uppercase;
+        color: #1F2041;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-item:not(:last-of-type){
+        margin-bottom: 7px;
+    }
+    .dropdown-item p{
+        float: left;
+    }
+    .dropdown-item .quantity-block{
+        float: right;
+    }
