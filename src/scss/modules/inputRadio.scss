@@ -1,0 +1,114 @@
+.radio-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.radio-label {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color:rgba(31, 32, 65, 0.75);
+    cursor: pointer;
+    margin-top:-3px;
+}
+
+.radio-label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: border .1s linear;
+}
+
+.radio-label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    background-color: #BC9CFF;
+    opacity: 0;
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+
+    transition: opacity .1s linear;
+}
+.radio-input:checked + .radio-label {
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.radio-input:checked + .radio-label:before {
+    border-color: #BC9CFF;
+}
+
+.radio-input:checked + .radio-label:after {
+    opacity: 1;
+}
+.switch-input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+.switch-label {
+    color:rgba(31, 32, 65, 0.75);
+    cursor: pointer;
+    margin-left: 18px;
+}
+.switch-label:before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 20px;
+
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: #fff;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: border .1s linear;
+}
+.switch-label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+
+    background-color:rgba(31, 32, 65, 0.25);
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+
+    transition: opacity .1s linear;
+}
+
+.switch-input:checked + .switch-label:before {
+    border-color: #BC9CFF;
+}
+
+.switch-input:checked + .switch-label:after {
+    top: 4px;
+    left: 24px;
+    background-color: #BC9CFF;  
+}

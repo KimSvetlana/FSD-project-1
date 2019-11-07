@@ -3,8 +3,8 @@ include ../utils/mixins
     form
         h2 Войти
         .form-group
-            input(type="email" class="form-control" id="email" placeholder="Email")
-            input(type="password" class="form-control" placeholder="Пароль")        
+            +input("text", "form-control", "email", "Email")
+            +input("text", "form-control", "password", "Пароль")        
         +button('form-button', '#', 'Войти', 'arrow_forward')        
     p Нет аккаунта на Toxin?
     +button('transparent-form', 'https://google.ru', 'Создать' )

@@ -3,25 +3,21 @@ include ../utils/mixins
     form
         h2 Регистрация аккаунта
         .form-group
-            input(type="text" class="form-control" id="name" placeholder="Имя")
-            input(type="text" class="form-control" id="surname" placeholder="Фамилия")
+            +input("text", "form-control", "name", "Имя")
+            +input("text", "form-control", "surname", "Фамилия")
             .radio
-                input.radio__input(name="male" type="radio" id="radio_1")
-                label.radio__label(for="radio_1") Мужчина
+                +inputRadio("radio-input", "radio", "male", "radio_1", "radio-label", "Мужчина")
             .radio
-                input.radio__input(name="male" type="radio" id="radio_2")
-                label.radio__label(for="radio_2") Женщина
+                +inputRadio("radio-input", "radio", "male", "radio_2", "radio-label", "Женщина")
         .form-group
             h3 Дата рождения
             input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
         .form-group
             h3 Данные для входа в сервис
-            input(type="email" class="form-control" id="email" placeholder="Email")
-            input(type="password" class="form-control" placeholder="Пароль")
+            +input("text", "form-control", "email", "Email")
+            +input("text", "form-control", "password", "Пароль")
             .custom-switch
-                input(type="checkbox" class="switch-input" id="customSwitch")
-                label(class="switch-label" for="customSwitch") Получать спецпредложения        
-        +button('form-button', "#", 'перейти к оплате', 'arrow_forward' )
-        
+                +inputRadio("switch-input", "checkbox", "special", "customSwitch", "switch-label", "Получать спецпредложения")     
+        +button('form-button', "#", 'перейти к оплате', 'arrow_forward' )        
     p Уже есть аккаунт на Toxin
     +button('transparent-form', 'https://google.ru', 'Войти' )

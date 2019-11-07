@@ -8,6 +8,15 @@ mixin checkbox(id_, for_, content, discription, checked_)
         label.checkbox-label(for=for_) #{content}
         p #{discription}
 
+mixin input(type_, class_, id_, placeholder_)
+    input(type=type_, class=class_, id=id_ placeholder=placeholder_)
+    
+
+mixin inputRadio(classInput, type_, name_, id_, classLabel, content)
+    input(class=classInput, type=type_, name=name_, id=id_)
+    label(class=classLabel, for=id_) #{content}
+    
+
 mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
     .cards
         a.cards-link(href="./roomDetails.html")

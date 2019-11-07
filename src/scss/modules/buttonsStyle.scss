@@ -9,21 +9,31 @@
     font-size: 12px;
     line-height: 15px;
 }
+.button .material-icons {
+    color: white;
+}
 
 .form-button {
     width: 100%;
     padding: 14px 20px;
    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
    border-radius: 22px;
+
+   padding-top: 13px;
+    padding-bottom: 15px;
+    padding-right: 8px;
+    padding-left: 30px;
 }
 .form-button:hover{
    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
    opacity: 0.5;
+   text-decoration: none;
+   color: white;
 }
 .transparent-form {
     float: right;
-    margin-top: 30px;
-    padding: 13px 17px;
+    margin-top: 31px;
+    padding: 13px 24px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
         /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
@@ -31,6 +41,8 @@
 }
 .transparent-form:hover{
     opacity: 0.5;
+    text-decoration: none;
+    color: #BC9CFF;
 }
 .transparent {
     position: absolute;
@@ -46,6 +58,8 @@
 }
 .transparent:hover{
     opacity: 0.5;
+    text-decoration: none;
+    color: #BC9CFF;
 }
 .color-button {
     position: absolute;
@@ -60,4 +74,6 @@
 .color-button:hover{
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     opacity: 0.5;
+    text-decoration: none;
+    color: white;
 }
