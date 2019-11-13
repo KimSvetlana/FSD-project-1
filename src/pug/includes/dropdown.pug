@@ -1,4 +1,4 @@
-.select
+.select(id="myform")
     .slct 
         p Сколько гостей 
         i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
@@ -12,6 +12,8 @@
         .dropdown-item
             p Младенцы
             include ../includes/quantityBlock
+        a.reset(href="#") Очистить
+        a.save(href="#") Применить
     <input type="hidden" id="select" />
-
+    
     //- a href="javascript:void(0);

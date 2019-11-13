@@ -10,7 +10,7 @@
         input(type="text" class="form-control check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
     .guests
         h3 гости
-        include ../includes/dropdown
+        +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
     .table-cost
         table
             tr

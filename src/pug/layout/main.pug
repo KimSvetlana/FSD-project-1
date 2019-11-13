@@ -183,12 +183,22 @@ html(lang='ru')
           }
         })();
       });
-      
+
+
+
     script.
+      /* не работает */
       $(document).ready(function() {
         $("span").click(function(){
           $("input").attr('value', parseInt($("input").val()) + 1);
         });
       });
+
+    script.
+      /* не работает */
+      $(".reset").bind("click", function() {
+        $('#myform')[0].reset();
+      });
+
   
   //- block script

@@ -49,3 +49,20 @@ mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
                 - for (var x = 0; x < ratingStars; x++)
                     i.material-icons star
             p.reviews-number <span class= "room-reviews">#{reviews}</span> Отзывов
+
+mixin dropdown(class_, name_, content1, content2, content3)
+    .select(class=class_)
+        .slct 
+            p #{name_}
+            i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
+        .dropdown-child
+            .dropdown-item
+                p #{content1}
+                include ../includes/quantityBlock
+            .dropdown-item
+                p #{content2}
+                include ../includes/quantityBlock
+            .dropdown-item
+                p #{content3}
+                include ../includes/quantityBlock
+        <input type="hidden" id="select" />

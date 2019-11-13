@@ -1,6 +1,7 @@
 extends ../layout/main
 include ../utils/mixins
 
+
 block variables
 	- var title = 'Вторая страница';
 	- var description = 'Описание сайта';
@@ -14,7 +15,9 @@ block content
 				input(type="text" class="form-control сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
 			.filter-group.guests
 				h3 гости
-				include ../includes/dropdown		
+				include ../includes/dropdown
+				//- +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
+								
 				//- div.select
 				//- 	<a href="javascript:void(0);" class="slct">Сколько гостей</a>
 				//- 	<ul class="drop">
@@ -39,7 +42,8 @@ block content
 				+checkbox("checkbox-5", "checkbox-5", "Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
 			.filter-group.comfort
 				h3 удобства номера
-				include ../includes/dropdown
+				include ../includes/dropdownComfort
+				//- +dropdown("dropdown-comfort", "Удобства номера", "спальни", "кровати", "ванные комнаты")
 			.filter-group.checkbox-list(id = "container-list")
 				ul.expandable-checkbox-list
 					li
