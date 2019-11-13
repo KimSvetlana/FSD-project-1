@@ -1,0 +1,5 @@
+mixin checkbox(id_, for_, content, discription, checked_)
+    .checkbox
+        input.checkbox-input(type="checkbox", id=id_, checked=checked_)
+        label.checkbox-label(for=for_) #{content}
+        p #{discription}

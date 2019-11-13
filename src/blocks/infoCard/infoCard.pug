@@ -1,3 +1,5 @@
+include ../button/button
+//- include ../dropdown/dropdown
 .infoCard
     .number-of-room
         p.number № <span class = "number-room">888</span> <span class = "lux">люкс</span>
@@ -10,7 +12,7 @@
         input(type="text" class="form-control check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
     .guests
         h3 гости
-        +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
+        //- +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
     .table-cost
         table
             tr

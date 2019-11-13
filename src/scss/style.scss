@@ -4,27 +4,28 @@
 @import "utils/fonts";
 @import "utils/reset";
 
-@import "modules/header";
-@import "modules/footer";
-@import "modules/LoginForm";
-@import "modules/accountRegistrationForm";
-@import "modules/datepickerForm";
-@import "modules/datepicker";
-@import "modules/socialBar";
-@import "modules/cardsRoom";
+@import "../blocks/accountRegistrationForm/accountRegistrationForm.scss";
+@import "../blocks/button/button.css";
+@import "../blocks/cardsRoom/cardsRoom.scss";
+@import "../blocks/datepicker/datepicker.scss";
+@import "../blocks/datepickerForm/datepickerForm.scss";
+@import "../blocks/dropdown/dropdown.scss";
+@import "../blocks/footer/footer.scss";
+@import "../blocks/header/header.scss";
+@import "../blocks/infoCard/infoCard.scss";
+@import "../blocks/input/input.scss";
+@import "../blocks/inputRadio/inputRadio.css";
+@import "../blocks/likeButton/likeButton.scss";
+@import "../blocks/loginForm/LoginForm.scss";
+@import "../blocks/pagination/pagination.scss";
+@import "../blocks/quantityBlock/quantityBlock.scss";
+@import "../blocks/sliderRange/sliderRange.scss";
+@import "../blocks/socialВаг/socialBar.scss";
+
 @import "modules/index";
 @import "modules/filter";
 @import "modules/page4";
-@import "modules/pagination";
-@import "modules/dropdown";
-@import "modules/quantityBlock";
-@import "modules/sliderRange";
 @import "modules/roomDetails";
-@import "modules/infoCard";
-@import "modules/likeButton";
-@import "modules/buttonsStyle";
-@import "modules/input";
-@import "modules/inputRadio";
 
 @import url(http://allfont.ru/allfont.css?fonts=quicksand-bold);
 

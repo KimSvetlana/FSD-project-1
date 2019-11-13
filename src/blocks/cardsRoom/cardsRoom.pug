@@ -1,22 +1,3 @@
-mixin button(class_, href_, content, icons)
-    a.button(class=class_ href=href_) #{content}
-        i.material-icons #{icons}
-
-mixin checkbox(id_, for_, content, discription, checked_)
-    .checkbox
-        input.checkbox-input(type="checkbox", id=id_, checked=checked_)
-        label.checkbox-label(for=for_) #{content}
-        p #{discription}
-
-mixin input(type_, class_, id_, placeholder_)
-    input(type=type_, class=class_, id=id_ placeholder=placeholder_)
-    
-
-mixin inputRadio(classInput, type_, name_, id_, classLabel, content)
-    input(class=classInput, type=type_, name=name_, id=id_)
-    label(class=classLabel, for=id_) #{content}
-    
-
 mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
     .cards
         a.cards-link(href="./roomDetails.html")
@@ -49,20 +30,3 @@ mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
                 - for (var x = 0; x < ratingStars; x++)
                     i.material-icons star
             p.reviews-number <span class= "room-reviews">#{reviews}</span> Отзывов
-
-mixin dropdown(class_, name_, content1, content2, content3)
-    .select(class=class_)
-        .slct 
-            p #{name_}
-            i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
-        .dropdown-child
-            .dropdown-item
-                p #{content1}
-                include ../includes/quantityBlock
-            .dropdown-item
-                p #{content2}
-                include ../includes/quantityBlock
-            .dropdown-item
-                p #{content3}
-                include ../includes/quantityBlock
-        <input type="hidden" id="select" />
