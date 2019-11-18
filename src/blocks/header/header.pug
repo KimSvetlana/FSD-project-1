@@ -1,24 +1,23 @@
 include ../button/button
-header.container(class= 'page-header')
-    .header-navigation
-        a.header-logo(href="/") 
-            img(src="assets/img/Logo.svg")
-        naw.main-navigation
-            ul.main-navigation-list
-                li.main-navigation-item
-                    a.main-nav-link(href="#") О нас
-                li.main-navigation-item
-                    a.main-nav-link(href="#") Услуги
-                        i.material-icons keyboard_arrow_down
-                li.main-navigation-item
-                    a.main-nav-link(href="#") Вакансии
-                li.main-navigation-item
-                    a.main-nav-link(href="#") Новости
-                li.main-navigation-item
-                    a.main-nav-link(href="#") Соглашения
-                        i.material-icons keyboard_arrow_downs
-            ul.user-navigation
-                li.login-link
-                    +button('transparent', href="./page4.html", 'Войти' )
-                li.registr
-                    +button('color-button', href="#", 'зарегистрироваться' )
+header.container(class= 'header')
+    a.header__logo(href="/") 
+        img(src="assets/img/Logo.svg")
+    naw.header__navigation
+        ul.navigation__list
+            li.list__item
+                a.main-nav-link(href="#") О нас
+            li.list__item
+                a.main-nav-link(href="#") Услуги
+                    i.material-icons keyboard_arrow_down
+            li.list__item
+                a.main-nav-link(href="#") Вакансии
+            li.list__item
+                a.main-nav-link(href="#") Новости
+            li.list__item
+                a.main-nav-link(href="#") Соглашения
+                    i.material-icons keyboard_arrow_downs
+        ul.user-navigation
+            li.login-link
+                +button('button_header_transparent', href="./page4.html", 'Войти' )
+            li.registr
+                +button('button_header_color', href="#", 'зарегистрироваться' )

@@ -1,5 +1,5 @@
 // header style
-.page-header{
+.header{
     min-height: 70px;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -7,46 +7,46 @@
     padding-left: 140px;
 }
 
-.header-logo{
+.header__logo{
     display:inline-block;
     float: left;
     width: 105.69px;
     height: 40px;
     margin-right: 285.31px;
 }
-.header-logo img {
+.header__logo img {
     position: absolute;
     width: 105.69px;
     height: 40px;
     top: 15px;
 }
 
-.main-navigation {
+.header__navigation {
     position: relative;
     flex: 1 1 auto;
 }
-.main-navigation-list {
+.navigation__list {
     padding-top: 26px;
 }
-.main-navigation-item {
+.list__item {
     float: left;
     position: relative;
     white-space: nowrap;
 }
-.main-navigation-item:not(:first-child) {
+.list__item:not(:first-child) {
     padding-left: 20.5px;
 }
-a.main-nav-link {
+a.navigation__link {
     display:inline-block;
     color: rgba(31, 32, 65, 0.5);
     // font-size: 14px;
     line-height: 17px;
 }
-a.main-nav-link:hover{
+a.navigation__link:hover{
     // font-weight: bold;
     color: #BC9CFF;
 }
-.material-icons {
+.navigation__icon {
     line-height: 0;
     float: right;
     margin-top: 9px;
