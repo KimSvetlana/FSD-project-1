@@ -12,6 +12,7 @@ include ../button/button
         input(type="text" class="form-control check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
     .guests
         h3 гости
+        include ../dropdown/dropdown
         //- +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
     .table-cost
         table
@@ -34,4 +35,4 @@ include ../button/button
                 th Итого
                 th.border-results
                 th.sum 38081₽
-    +button('form-button', '#', 'забронировать', 'arrow_forward' )
+    +button('button_form', '#', 'забронировать', 'arrow_forward' )

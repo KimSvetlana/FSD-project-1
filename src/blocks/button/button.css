@@ -8,43 +8,36 @@
     color: white;
     font-size: 12px;
     line-height: 15px;
+    border-radius: 22px;
 }
-.button .material-icons {
+.button__icons {
     color: white;
 }
 
-.form-button {
+.button_form {
     width: 100%;
-    padding: 14px 20px;
-   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-   border-radius: 22px;
-
-   padding-top: 13px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+   
+    padding-top: 13px;
     padding-bottom: 15px;
     padding-right: 8px;
     padding-left: 30px;
 }
-.form-button:hover{
-   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-   opacity: 0.5;
-   text-decoration: none;
-   color: white;
-}
-.transparent-form {
+.button_form_transparent {
     float: right;
     margin-top: 31px;
     padding: 13px 24px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
         /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
-    border-radius: 22px;
 }
-.transparent-form:hover{
+.button_form_transparent:hover,
+.button_header_transparent:hover {
     opacity: 0.5;
     text-decoration: none;
     color: #BC9CFF;
 }
-.transparent {
+.button_header_transparent {
     position: absolute;
     top: 18px;
     width: 87px;
@@ -54,14 +47,8 @@
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
     /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
-    border-radius: 22px;
 }
-.transparent:hover{
-    opacity: 0.5;
-    text-decoration: none;
-    color: #BC9CFF;
-}
-.color-button {
+.button_header_color {
     position: absolute;
     top: 18px;
     width: 196px;
@@ -69,9 +56,9 @@
     padding: 9px 20px;
     margin-left: 105px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
 }
-.color-button:hover{
+.button_form:hover,
+.button_header_color:hover{
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     opacity: 0.5;
     text-decoration: none;
