@@ -5,19 +5,19 @@ header.container(class= 'header')
     naw.header__navigation
         ul.navigation__list
             li.list__item
-                a.main-nav-link(href="#") О нас
+                a.navigation__link(href="#") О нас
             li.list__item
-                a.main-nav-link(href="#") Услуги
-                    i.material-icons keyboard_arrow_down
+                a.navigation__link(href="#") Услуги
+                    i.navigation__icon.material-icons keyboard_arrow_down
             li.list__item
-                a.main-nav-link(href="#") Вакансии
+                a.navigation__link(href="#") Вакансии
             li.list__item
-                a.main-nav-link(href="#") Новости
+                a.navigation__link(href="#") Новости
             li.list__item
-                a.main-nav-link(href="#") Соглашения
-                    i.material-icons keyboard_arrow_downs
-        ul.user-navigation
-            li.login-link
+                a.navigation__link(href="#") Соглашения
+                    i.navigation__icon.material-icons keyboard_arrow_downs
+        ul.navigation__user
+            li.user__login-button
                 +button('button_header_transparent', href="./page4.html", 'Войти' )
-            li.registr
+            li.user__registr-button
                 +button('button_header_color', href="#", 'зарегистрироваться' )

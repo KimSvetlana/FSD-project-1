@@ -12,6 +12,9 @@
 }
 .button__icons {
     color: white;
+    line-height: 0;
+    float: right;
+    margin-top: 9px;
 }
 
 .button_form {
@@ -27,6 +30,14 @@
     float: right;
     margin-top: 31px;
     padding: 13px 24px;
+    color: #BC9CFF;
+    border: 2px solid #BC9CFF; 
+        /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
+}
+.button_form_login {
+    float: right;
+    margin-top: 31px;
+    padding: 13px 16px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
         /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
