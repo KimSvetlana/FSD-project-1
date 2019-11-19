@@ -1,30 +1,30 @@
-.footer-social-bar {
+.footer__social-bar {
     height: 70px;
     border-top: 1px solid rgba(31, 32, 65, 0.25);
     padding-left: 140px;
     padding-right: 140px;
     background-color: white;
 }
-.footer-copyright{
+.footer__copyright{
     float: left;
     margin-top: 26px;
     color: rgba(31, 32, 65, 0.75);
 }
-.footer-social {
+.footer__social {
     float:right;
     margin-top: 23px;
 }
-.social-btn {
+.social__btn {
     display: inline-block;
     font-size: 24px;
     line-height: 23px;
     margin-right: 25px;
     color:   #BC9CFF;
 }
-.social-btn:last-child {
+.social__btn:last-child {
     margin-right: 0px;
 }
-.social-btn:hover {
+.social__btn:hover {
     color:   #BC9CFF;
     opacity: 0.5;
 }
