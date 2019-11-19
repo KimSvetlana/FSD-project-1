@@ -1,4 +1,5 @@
 .login-form {
+    //display: none;
     position: absolute;
     width: 380px;
     height: 358px;
@@ -15,10 +16,7 @@
     padding-left: 30px;
     padding-right: 30px;    
 }
-.login-form.login{
-    display: none;
-}
-.login-form h2 {
+.login__title_h2 {
     font-family: "Open Sans";
     font-style: normal;
     font-weight: bold;
@@ -26,11 +24,11 @@
     line-height: 30px;
     color: #1F2041;
 }
-.form-group {
+.form__group {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.form-group input:first-of-type {
+.form__group input:first-of-type {
     margin-bottom: 10px;
 }
 .login-form p {

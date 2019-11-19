@@ -1,11 +1,11 @@
 include ../button/button
 include ../input/input
-.login-form.login
+.login-form
     form
-        h2 Войти
-        .form-group
+        h2.login__title_h2 Войти
+        .form__group
             +input("text", "form-control", "email", "Email")
             +input("text", "form-control", "password", "Пароль")        
-        +button('form-button', '#', 'Войти', 'arrow_forward')        
+        +button('button_form', '#', 'Войти', 'arrow_forward')        
     p Нет аккаунта на Toxin?
-    +button('transparent-form', 'https://google.ru', 'Создать' )
+    +button('button_form_login', 'https://google.ru', 'Создать' )
