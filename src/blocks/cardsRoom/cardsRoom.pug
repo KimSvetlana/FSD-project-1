@@ -1,7 +1,7 @@
 mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
     .cards
-        a.cards-link(href="./roomDetails.html")
-        .carousel.slide(id="slides" data-ride="carousel")
+        a.cards__link(href="./roomDetails.html")
+        .carousel.cards__carousel(id="slides" data-ride="carousel")
             ol.carousel-indicators
                 <li data-target="#slides" data-slide-to="0" class="active"></li>
                 <li data-target="#slides" data-slide-to="1"></li>
@@ -17,16 +17,16 @@ mixin cardsRoom(img_0, number, cost, reviews, lux, ratingStars)
                 //- .carousel-item
                 //-      img(src=img_3)
             a.carousel-control-prev(href="#slides" role="button" data-slide="prev")
-                i.material-icons keyboard_arrow_left
+                i.material-icons.carousel__icons_prev keyboard_arrow_left
             a.carousel-control-next(href="#slides" role="button" data-slide="next")
-                i.material-icons keyboard_arrow_right    
-        .number-and-cost
-            p.number № <span class = "number-room">#{number}</span> <span class = "lux">#{lux}</span>
-            p.cost  <span class= "room-cost">#{cost}</span> в сутки 
-        .rating-and-reviews
-            .rating
-                - for (var x = ratingStars; x < 5; x++)
-                    i.material-icons star_border     
+                i.material-icons.carousel__icons_next keyboard_arrow_right    
+        .cards__number-and-cost
+            p.cards__number № <span class = "cards__number-room">#{number}</span> <span class = "cards__lux">#{lux}</span>
+            p.cards__cost  <span class= "cards__room-cost">#{cost}</span> в сутки 
+        .cards__rating-and-reviews
+            .cards__rating
                 - for (var x = 0; x < ratingStars; x++)
-                    i.material-icons star
-            p.reviews-number <span class= "room-reviews">#{reviews}</span> Отзывов
+                    i.material-icons.cards__icons_rating star     
+                - for (var x = ratingStars; x < 5; x++)
+                    i.material-icons.cards__icons_rating star_border
+            p.cards__reviews <span class= "cards__room-reviews">#{reviews}</span> Отзывов

@@ -6,7 +6,7 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
 }
-.cards-link{
+.cards__link{
     position: absolute;
     top:0;
     left:0;
@@ -56,22 +56,22 @@
     width: 16%
 }
 
-.carousel-control-next i,
-.carousel-control-prev i {
+.carousel__icons_prev,
+.carousel__icons_next {
  color: white;
  margin-top: -1px;
 }
 
-.number-and-cost,
-.rating-and-reviews {
+.cards__number-and-cost,
+.cards__rating-and-reviews {
     margin-left: 20px;
     margin-right: 20px;
 }
-.number-and-cost {
-    height: 54px;
+.cards__number-and-cost {
+    height: 55px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.25);
 }
-.number-and-cost p.number {
+.cards__number {
     float: left;
     margin-top: 22px;
     font-family: Montserrat;
@@ -84,7 +84,7 @@
     color:#1F2041;
 }
 
-.number-and-cost span.number-room {
+.cards__number-room {
     font-family: 'Quicksand Bold', arial;
     font-style: normal;
     font-weight: bold;
@@ -96,17 +96,17 @@
     margin-left: 3px;
     letter-spacing: 1px;
 }
-.number-and-cost span.lux{
+.cards__lux{
     color: #BC9CFF;
 }
-.number-and-cost p.cost {
+.cards__cost {
     float: right;
     margin-top: 25px;
     font-family: Montserrat;
     font-size: 12px;
     color: rgba(31, 32, 65, 0.5);
 }
-.number-and-cost span.room-cost {
+.cards__room-cost {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -114,14 +114,14 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
 }
-.rating-and-reviews .rating {
-    margin-top: 12px;
+.cards__rating {
+    margin-top: 8px;
     float: left;
 }
-.rating-and-reviews .rating i.material-icons{
+.cards__icons_rating{
     color:#BC9CFF;
 }
-.rating-and-reviews p.reviews-number{
+.cards__reviews{
     float: right;
     margin-top: 13px;
     font-family: Montserrat;
@@ -132,6 +132,6 @@
     text-align: right;
     color: rgba(31, 32, 65, 0.5);
 }
-.rating-and-reviews span.room-reviews{
+.cards__room-reviews{
     font-weight: bold;
 }
