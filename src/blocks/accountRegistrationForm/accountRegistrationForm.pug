@@ -2,21 +2,21 @@ include ../button/button
 include ../input/input
 include ../inputRadio/inputRadio
 
-.login-form(class='registration')
+.registration-form
     form
-        h2 Регистрация аккаунта
-        .form-group
+        h2.registration__title_h2 Регистрация аккаунта
+        .registration__group
             +input("text", "form-control", "name", "Имя")
             +input("text", "form-control", "surname", "Фамилия")
             .radio
                 +inputRadio("radio-input", "radio", "male", "radio_1", "radio-label", "Мужчина")
             .radio
                 +inputRadio("radio-input", "radio", "male", "radio_2", "radio-label", "Женщина")
-        .form-group
-            h3 Дата рождения
+        .registration__group
+            h3.registration__title_h3 Дата рождения
             input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
-        .form-group
-            h3 Данные для входа в сервис
+        .registration__group
+            h3.registration__title_h3 Данные для входа в сервис
             +input("text", "form-control", "email", "Email")
             +input("text", "form-control", "password", "Пароль")
             .custom-switch
