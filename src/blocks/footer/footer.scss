@@ -1,4 +1,4 @@
-.page-footer{
+.footer{
     display: flex;
     flex-wrap: wrap;
     min-height: 372px;
@@ -8,20 +8,20 @@
     padding-left: 140px;
     padding-top: 100px;
 }
-.footer-discription {
+.footer__discription {
     width: 260px;
     float:left;
     margin-right: 40px;
 }
-.footer-logo img {
+.footer__logo img {
     margin-bottom: 18px;
 }
-.footer-discription p {
+.footer__discription p {
     color: rgba(31, 32, 65, 0.75);;
     
     line-height: 24px;
 }
-.site-navigation {
+.footer__navigation {
     display: grid;
     flex-wrap: wrap;
     grid-row-gap: 40px;
@@ -33,7 +33,7 @@
     margin-top:4px;
 }
 
-.site-navigation-item h2{
+.footer__title{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
@@ -43,16 +43,16 @@
     text-transform: uppercase;
     color: #1F2041;
 }
-.site-navigation-item li {
+.footer__item li {
     margin-bottom: 21px;
     line-height: 17px;
 }
-.site-navigation-item a {
+.footer__item a {
     font-size: 14px;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.5);
 }
-.site-navigation-item a:hover {
+.footer__item a:hover {
   color: #BC9CFF;
 }
 

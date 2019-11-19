@@ -1,14 +1,13 @@
 include ../input/input
-footer.container(class= 'page-footer')
-    .footer-navigation
-        .footer-discription
-            a.footer-logo(href="/")
+footer.container(class= 'footer')
+        .footer__discription
+            a.footer__logo(href="/")
                 img(src="assets/img/Logo.svg")
             p   Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        nav.site-navigation
-            .site-navigation-item
-                h2  Навигация
-                ul.site-navigation-list
+        nav.footer__navigation
+            .footer__item
+                h2.footer__title  Навигация
+                ul.footer__list
                     li
                         a(href="#") О нас
                     li
@@ -17,9 +16,9 @@ footer.container(class= 'page-footer')
                         a(href="#") Служба поддержки
                     li
                         a(href="#") Услуги
-            .site-navigation-item
-                h2  О нас
-                ul.site-navigation-list
+            .footer__item
+                h2.footer__title  О нас
+                ul.footer__list
                     li
                         a(href="#") О сервисе
                     li
@@ -28,18 +27,18 @@ footer.container(class= 'page-footer')
                         a(href="#") Вакансии
                     li
                         a(href="#") Инвесторы
-            .site-navigation-item
-                h2  Служба поддержки
-                ul.site-navigation-list
+            .footer__item
+                h2.footer__title  Служба поддержки
+                ul.footer__list
                     li
                         a(href="#") Соглашения
                     li
                         a(href="#") Сообщества
                     li
                         a(href="#") Связь с нами
-            .site-navigation-item
+            .footern__item
                 .subscription
-                    h2  Подписка
+                    h2.footer__title  Подписка
                     p   Получайте специальные предложения и новости сервиса
                     +input("email", "subscription", "email", "Email")
                     
