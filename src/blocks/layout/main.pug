@@ -16,12 +16,12 @@ html(lang='ru')
 
   block head
   body(class=pageClass)
-    .wrapper
-        include ../../blocks/header/header
+    //-.wrapper
+    include ../header/header
         //- .content-wrapper
-        block content
-        include ../../blocks/footer/footer
-        include ../../blocks/socialВаг/socialВаг
+    block content
+    include ../footer/footer
+    include ../socialВаг/socialВаг
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
     script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")

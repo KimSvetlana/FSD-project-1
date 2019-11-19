@@ -22,10 +22,10 @@
 @import "../blocks/sliderRange/sliderRange.scss";
 @import "../blocks/socialВаг/socialBar.scss";
 
-@import "modules/index";
-@import "modules/filter";
-@import "modules/page4";
-@import "modules/roomDetails";
+@import "../pages/index/index";
+@import "../pages/filter/filter";
+@import "../pages/page4/page4";
+@import "../pages/roomDetails/roomDetails";
 
 @import url(http://allfont.ru/allfont.css?fonts=quicksand-bold);
 

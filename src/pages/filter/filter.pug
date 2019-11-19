@@ -1,6 +1,6 @@
-extends ./layout/main
-include ../blocks/checkbox/checkbox
-include ../blocks/cardsRoom/cardsRoom
+extends ../../blocks/layout/main
+include ../../blocks/checkbox/checkbox
+include ../../blocks/cardsRoom/cardsRoom
 //- include ../utils/mixins
 
 
@@ -17,7 +17,7 @@ block content
 				input(type="text" class="form-control сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
 			.filter-group.guests
 				h3 гости
-				include ../blocks/dropdown/dropdown
+				include ../../blocks/dropdown/dropdown
 				//- +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
 								
 				//- div.select
@@ -32,7 +32,7 @@ block content
 				//- 	<input type="hidden" id="select" />
 
 			.filter-group.cost
-				include ../blocks/sliderRange/sliderRange
+				include ../../blocks/sliderRange/sliderRange
 			.filter-group.checkbox-1
 				h3 Checkbox Buttons
 				+checkbox("checkbox-1", "checkbox-1", "Можно курить", "")
@@ -44,7 +44,7 @@ block content
 				+checkbox("checkbox-5", "checkbox-5", "Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
 			.filter-group.comfort
 				h3 удобства номера
-				include ../blocks/dropdownComfort/dropdownComfort
+				include ../../blocks/dropdownComfort/dropdownComfort
 				//- +dropdown("dropdown-comfort", "Удобства номера", "спальни", "кровати", "ванные комнаты")
 			.filter-group.checkbox-list(id = "container-list")
 				ul.expandable-checkbox-list
@@ -88,4 +88,4 @@ block content
 				+cardsRoom("./assets/img/imageRoom10.jpg", "666", "5 000₽", "25", "", 5)
 				+cardsRoom("./assets/img/imageRoom11.jpg", "444", "5 000₽", "15", "", 3)
 				+cardsRoom("./assets/img/imageRoom12.jpg", "352", "5 000₽", "55", "", 3)
-			include ../blocks/pagination/pagination
+			include ../../blocks/pagination/pagination

@@ -13,14 +13,20 @@ const PATHS = {
 }
 
 const PAGES_DIR = `${PATHS.src}/pages/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES = [];
+fs.readdirSync(PAGES_DIR).forEach(pageDir => {
+    const pageName = fs.readdirSync(`${PAGES_DIR}/${pageDir}/`).find(filename => filename.endsWith('.pug'));
+    PAGES.push(`${PAGES_DIR}/${pageDir}/${pageName}`);
+});
+console.log("PAGES = " + PAGES.toString());
+// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
     externals: {
         paths: PATHS
     },
     entry: {
-        app5: PATHS.src
+        app: PATHS.src
     },
     output: {
         filename: `${PATHS.assets}js/[name].js`,
@@ -65,9 +71,7 @@ module.exports = {
             //  outputPath: './img/',
             //  publicPath: '../'
              }
-        }, 
-        
-        {
+        }, {
             test: /\.css$/,
             use: [
                 'style-loader',
@@ -110,8 +114,8 @@ module.exports = {
           filename: `${PATHS.assets}css/[name].css`,
         }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
-            template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/,'.html')}`
+            template: page,
+            filename: `./${path.basename(page).replace(/\.pug/,'.html')}`
         })),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
