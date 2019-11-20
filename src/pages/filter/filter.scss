@@ -39,69 +39,6 @@ h3 {
 .filter-group.checkbox-2{
     margin-top: 18px;
 }
-.checkbox {
-    position: relative;
-}
-
-.checkbox-input {
-    -webkit-appearance: none;
-    appearance: none;
-    position: absolute;
-}
-
-.checkbox-label {
-    padding-left: 30px;
-    margin-bottom: 12px;
-
-    font-size: 14px;
-    line-height: 18px;
-    color:rgba(31, 32, 65, 0.5);
-    cursor: pointer;
-}
-
-.checkbox-label:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-
-    border:  1px solid rgba(31, 32, 65, 0.25);
-    background-color: #fff;
-    border-radius: 4px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    transition: background .1s linear, border .1s linear;
-}
-
-.checkbox-label:after {
-    content: "";
-    display: block;
-    width: 15px;
-    height: 15px;
-
-    background: url("../img/Vector.png") no-repeat;
-    // background-size: 12px 12px;
-    opacity: 0;
-
-    position: absolute;
-    top: 2px;
-    left: 4px;
-    z-index: 2;
-
-    transition: opacity .1s linear;
-}
-.checkbox-input:checked + .checkbox-label:before {
-    border: 1px solid #BC9CFF;
-}
-
-.checkbox-input:checked + .checkbox-label:after {
-    opacity: 1;
-}
-
 .filter-group.checkbox-2 label{
     font-weight: bold;
     font-size: 14px;
