@@ -4,8 +4,8 @@ include ../input/input
     form
         h2.login__title_h2 Войти
         .form__group
-            +input("text", "form-control", "email", "Email")
-            +input("text", "form-control", "password", "Пароль")        
+            +input("text", "input_form", "email", "Email")
+            +input("text", "input_form", "password", "Пароль")        
         +button('button_form', '#', 'Войти', 'arrow_forward')        
     p Нет аккаунта на Toxin?
     +button('button_form_login', 'https://google.ru', 'Создать' )
