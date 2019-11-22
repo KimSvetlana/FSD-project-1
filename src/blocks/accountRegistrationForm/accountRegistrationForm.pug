@@ -5,22 +5,22 @@ include ../inputRadio/inputRadio
 .registration-form
     form
         h2.registration__title_h2 Регистрация аккаунта
-        .registration__group
-            +input("text", "form-control", "name", "Имя")
-            +input("text", "form-control", "surname", "Фамилия")
+        .registration__group_first
+            +input("text", "input_form", "name", "Имя")
+            +input("text", "input_form", "surname", "Фамилия")
             .radio
-                +inputRadio("radio-input", "radio", "male", "radio_1", "radio-label", "Мужчина")
+                +inputRadio("input_radio", "radio", "male", "radio_1", "label_radio", "Мужчина")
             .radio
-                +inputRadio("radio-input", "radio", "male", "radio_2", "radio-label", "Женщина")
-        .registration__group
+                +inputRadio("input_radio", "radio", "male", "radio_2", "label_radio", "Женщина")
+        .registration__group_second
             h3.registration__title_h3 Дата рождения
-            input(type="date" class="form-control" id="date" placeholder="ДД.ММ.ГГГГ")
-        .registration__group
+            input(type="date" class="input_form" id="date" placeholder="ДД.ММ.ГГГГ")
+        .registration__group_third
             h3.registration__title_h3 Данные для входа в сервис
-            +input("text", "form-control", "email", "Email")
-            +input("text", "form-control", "password", "Пароль")
+            +input("text", "input_form", "email", "Email")
+            +input("text", "input_form", "password", "Пароль")
             .custom-switch
-                +inputRadio("switch-input", "checkbox", "special", "customSwitch", "switch-label", "Получать спецпредложения")     
+                +inputRadio("input_switch", "checkbox", "special", "customSwitch", "label_switch", "Получать спецпредложения")     
         +button('button_form', "#", 'перейти к оплате', 'arrow_forward' )        
     p Уже есть аккаунт на Toxin
     +button('button_form_transparent', 'https://google.ru', 'Войти' )

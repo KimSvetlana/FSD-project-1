@@ -1,5 +1,5 @@
 .registration-form {
-     display: none;
+    //  display: none;
     position: absolute;
     width: 380px;
     height: 646px; 
@@ -12,15 +12,25 @@
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 30px;    
+    padding-top: 39px;
+    padding-left: 29px;
+    padding-right: 29px;    
 }
-.registration__group {
+.registration__group_first {
     margin-top: 20px;
-    margin-bottom: 21px;
 }
-.registration__group input:first-of-type {
+.registration__group_second{
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.registration__group_third{
+    margin-bottom: 23px;
+}
+
+.registration__group_first input:first-of-type,
+.registration__group_second input:first-of-type,
+.registration__group_third input:first-of-type  {
     margin-bottom: 10px;
 }
 .registration__title_h2{
@@ -42,16 +52,11 @@
 .radio {
     position: relative;
     display: inline-block;
-    margin-top: 10.44px;
     margin-right: 20px;
 }
 .custom-switch {
     position: relative;
-    margin-top: 10px;
     margin-right: 10px;
-}
-.registration__group:last-of-type{
-    margin-bottom: 22px;
 }
 .registration-form p {
     float: left;
