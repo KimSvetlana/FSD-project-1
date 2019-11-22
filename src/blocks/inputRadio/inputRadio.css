@@ -1,10 +1,10 @@
-.radio-input {
+.input_radio {
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
 }
 
-.radio-label {
+.label_radio {
     padding-left: 30px;
     font-size: 14px;
     line-height: 24px;
@@ -13,7 +13,7 @@
     margin-top:-3px;
 }
 
-.radio-label:before {
+.label_radio:before {
     content: "";
     display: block;
     width: 20px;
@@ -31,7 +31,7 @@
     transition: border .1s linear;
 }
 
-.radio-label:after {
+.label_radio:after {
     content: "";
     display: block;
     width: 12px;
@@ -48,28 +48,28 @@
 
     transition: opacity .1s linear;
 }
-.radio-input:checked + .radio-label {
+.input_radio:checked + .label_radio {
     color: rgba(31, 32, 65, 0.75);
 }
 
-.radio-input:checked + .radio-label:before {
+.rinput_radio:checked + .label_radio:before {
     border-color: #BC9CFF;
 }
 
-.radio-input:checked + .radio-label:after {
+.input_radio:checked + .label_radio:after {
     opacity: 1;
 }
-.switch-input {
+.input_switch {
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
 }
-.switch-label {
+.label_switch {
     color:rgba(31, 32, 65, 0.75);
     cursor: pointer;
     margin-left: 18px;
 }
-.switch-label:before {
+.label_switch:before {
     content: "";
     display: block;
     width: 40px;
@@ -86,7 +86,7 @@
 
     transition: border .1s linear;
 }
-.switch-label:after {
+.label_switch:after {
     content: "";
     display: block;
     width: 12px;
@@ -103,11 +103,11 @@
     transition: opacity .1s linear;
 }
 
-.switch-input:checked + .switch-label:before {
+.input_switch:checked + .label_switch:before {
     border-color: #BC9CFF;
 }
 
-.switch-input:checked + .switch-label:after {
+.input_switch:checked + .label_switch:after {
     top: 4px;
     left: 24px;
     background-color: #BC9CFF;  

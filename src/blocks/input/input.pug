@@ -1,2 +1,6 @@
-mixin input(type_, class_, id_, placeholder_)
-    input(type=type_, class=class_, id=id_ placeholder=placeholder_)
+mixin input(type_, class_, id_, placeholder_, icons)
+    .input-wrapper
+        input(type=type_, class=class_, id=id_ placeholder=placeholder_)
+        a.input_link(href ='#')
+            i.material-icons.input__icons #{icons}
+    
