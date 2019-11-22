@@ -15,22 +15,23 @@
 //-                 include ../includes/quantityBlock
 //-         <input type="hidden" id="select" /> 
 
-.select(id="myform")
-    .slct 
+.dropdown(id="myform")
+    .dropdown__select 
         p Сколько гостей 
-        i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
-    .dropdown-child
-        .dropdown-item
+        i.material-icons.dropdown__icon expand_more
+    .dropdown__child
+        .child__item
             p Взрослые
             include ../quantityBlock/quantityBlock
-        .dropdown-item
+        .child__item
             p   Дети
             include ../quantityBlock/quantityBlock
-        .dropdown-item
+        .child__item
             p Младенцы
             include ../quantityBlock/quantityBlock
-        a.reset(href="#") Очистить
-        a.save(href="#") Применить
+        .dropdown__lincks
+            a.lincks__reset(href="#") Очистить
+            a.lincks__save(href="#") Применить
     <input type="hidden" id="select" />
     
     //- a href="javascript:void(0);

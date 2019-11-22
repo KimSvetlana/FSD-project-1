@@ -1,15 +1,15 @@
-.select.dropdown-comfort
-    .slct 
+.dropdown.dropdown-comfort
+    .dropdown__select 
         p Удобства номера 
-        i.material-icons.dropdown-icon(id = "dropdown-icon") expand_more
-    .dropdown-child
-        .dropdown-item
+        i.material-icons.dropdown__icon expand_more
+    .dropdown__child
+        .child__item
             p спальни
             include ../quantityBlock/quantityBlock
-        .dropdown-item
+        .child__item
             p кровати
             include ../quantityBlock/quantityBlock
-        .dropdown-item
+        .child__item
             p ванные комнаты
             include ../quantityBlock/quantityBlock
     <input type="hidden" id="select" />
