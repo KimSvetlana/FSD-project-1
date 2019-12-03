@@ -23,8 +23,8 @@ html(lang='ru')
     include ../footer/footer
     include ../socialВаг/socialВаг
 
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-    script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
     script.
       $('#dateFrom').datepicker({
         inline: true,
@@ -75,9 +75,9 @@ html(lang='ru')
     
       /* Select */
     script.
-      $('.slct').click(function(){
+      $('.dropdown__select').click(function(){
         /* Заносим выпадающий список в переменную */
-        var dropBlock = $(this).parent().find('.dropdown-child');
+        var dropBlock = $(this).parent().find('.dropdown__child');
         
         /* Делаем проверку: Если выпадающий блок скрыт то делаем его видимым*/
         if( dropBlock.is(':hidden') ) {
@@ -87,7 +87,7 @@ html(lang='ru')
           $(this).addClass('active');
           
           /* Работаем с событием клика по элементам выпадающего списка */
-          $('.dropdown-child').find('div').click(function(){
+          $('.dropdown__child').find('div').click(function(){
             
             /* Заносим в переменную HTML код элемента списка по которому кликнули */
             var selectResult = $(this).html();
@@ -96,7 +96,7 @@ html(lang='ru')
             $(this).parent().parent().find('input').val(selectResult);
             
             /* Передаем значение переменной selectResult в ссылку которая открывает наш выпадающий список и удаляем активность */
-            $(this).parent().parent().find('.slct').removeClass('active').html(selectResult);
+            $(this).parent().parent().find('.dropdown__select').removeClass('active').html(selectResult);
             
             /* Скрываем выпадающий блок */
             dropBlock.slideUp();
@@ -135,9 +135,9 @@ html(lang='ru')
 
       div.addEventListener('click', function(){
         if(open){
-          icon.className = 'material-icons checkbox-list';  
+          icon.className = 'material-icons checkbox-list__icon';  
           } else{
-            icon.className = 'material-icons checkbox-list open';
+            icon.className = 'material-icons checkbox-list__icon open';
           }
         open = !open;
       });
@@ -147,8 +147,8 @@ html(lang='ru')
     
     script.
       window.onload = function(){
-        var paginationPage = parseInt($('.cdp').attr('actpage'), 10);
-        $('.cdp_i').on('click', function(){
+        var paginationPage = parseInt($('.cp').attr('actpage'), 10);
+        $('.cp_i').on('click', function(){
           var go = $(this).attr('href').replace('#!', '');
           if (go === '+1') {
             paginationPage++;
@@ -157,7 +157,7 @@ html(lang='ru')
           }else{
             paginationPage = parseInt(go, 10);
           }
-        $('.cdp').attr('actpage', paginationPage);
+        $('.cp').attr('actpage', paginationPage);
         });
       };
   
@@ -184,21 +184,49 @@ html(lang='ru')
         })();
       });
 
-
-
     script.
-      /* не работает */
-      $(document).ready(function() {
-        $("span").click(function(){
-          $("input").attr('value', parseInt($("input").val()) + 1);
-        });
+      $('.button_header_registration').click(function(){
+        $('.registration-form').addClass('active');
       });
 
-    script.
-      /* не работает */
-      $(".reset").bind("click", function() {
-        $('#myform')[0].reset();
-      });
+  //- script.
+  //-   var registrationForm = document.querySelector('.registration-form');
+  //-   var loginForm = document.querySelector('.login-form');
+  //-   document.querySelector('.button_header_registration').onclick = function() {
+  //-     registrationForm.classList.add("active");
+  //-   };
+
+  //-   document.querySelector('.button_form_create').onclick = function() {
+  //-     registrationForm.classList.add("active");
+  //-   };
+    
+  //-   document.querySelector('.button_form_login').onclick = function() {
+  //-     registrationForm.classList.remove("active");
+  //-   };
+
+    //- script.
+    //- var registrationForm = document.querySelector('.registration-form');
+    //- var loginForm = document.querySelector('.login-form');
+    //- document.querySelector('.button_form_create').onclick = function() {
+    //-   registrationForm.classList.add("active");
+
+    //- document.querySelector('.button_form_login').onclick = function() {
+    //-   registrationForm.classList.remove("active");
+    //- };
+
+    //- script.
+    //-   /* не работает */
+    //-   $(document).ready(function() {
+    //-     $("span").click(function(){
+    //-       $("input").attr('value', parseInt($("input").val()) + 1);
+    //-     });
+    //-   });
+
+    //- script.
+    //-   /* не работает */
+    //-   $(".reset").bind("click", function() {
+    //-     $('#myform')[0].reset();
+    //-   });
 
   
   //- block script
