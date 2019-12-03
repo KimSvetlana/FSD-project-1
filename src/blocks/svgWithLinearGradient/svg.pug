@@ -1,0 +1,11 @@
+mixin svgLinearGradient(id_, colorStart, colorEnd)
+    svg(xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none")
+        circle(cx="5" cy="5" r="5" fill=`${"url(#"+id_+")"}`)
+        defs
+            linearGradient(id=id_ x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse")
+                stop(stop-color=colorStart)
+                stop(offset="1" stop-color=colorEnd)
+
+mixin svg
+    svg(xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none")
+        ellipse(cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25")
