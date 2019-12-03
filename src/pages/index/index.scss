@@ -1,17 +1,22 @@
-.page-content {
+.index-page__content {
     position: relative;
     height:830px;
     background: url(../img/image3.png) no-repeat;
     background-position-y: -70px;
   }
-  .block-content{
+  .index-content__datepicker-form {
+    position: absolute;
+    left: 140px;
+    top: 70px;
+  }
+  .index-content__discription {
     position: absolute;
     width: 297px;
     height: 48px;
     bottom: 19px;
     left: 1009px;
   }
-  .block-content p {
+  .discription__p {
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);

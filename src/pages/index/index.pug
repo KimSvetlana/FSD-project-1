@@ -6,8 +6,8 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
-	div.container(class="page-content")
-		//- style="background:url(./img/image3.png) no-repeat")   
-		.block-content
-			p Лучшие номера для вашей работы, отдыха и просто вдохновения	
-		include ../../blocks/datepickerForm/datepickerForm
+	div.container(class="index-page__content")
+		.index-content__datepicker-form
+			include ../../blocks/datepickerForm/datepickerForm
+		.index-content__discription
+			p.discription__p Лучшие номера для вашей работы, отдыха и просто вдохновения	
