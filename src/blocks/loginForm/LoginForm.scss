@@ -1,10 +1,13 @@
 .login-form {
-    display: none;
+    // display: none;
     position: absolute;
     width: 380px;
     height: 358px;
-    left: 530px;
     top: 163px;
+    // left: 530px;
+    right: 0;
+    left:0;
+    margin: auto;
 
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -14,7 +17,10 @@
 
     padding-top: 39px;
     padding-left: 29px;
-    padding-right: 29px;    
+    padding-right: 29px;
+
+
+    
 }
 .login__title_h2 {
     font-family: "Open Sans";

@@ -22,33 +22,40 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
    
     padding-top: 13px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     padding-right: 8px;
     padding-left: 30px;
 }
-.button_form_transparent {
-    float: right;
-    margin-top: 31px;
-    padding: 13px 24px;
-    color: #BC9CFF;
-    border: 2px solid #BC9CFF; 
-        /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
-}
 .button_form_login {
     float: right;
-    margin-top: 31px;
-    padding: 13px 16px;
+    margin-top: 30px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
     color: #BC9CFF;
     border: 2px solid #BC9CFF; 
         /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
 }
-.button_form_transparent:hover,
-.button_header_transparent:hover {
+.button_form_create {
+    float: right;
+    margin-top: 30px;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 17px;
+    color: #BC9CFF;
+    border: 2px solid #BC9CFF; 
+        /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
+}
+.button_form_login:hover,
+.button_header_login:hover,
+.button_form_create:hover {
     opacity: 0.5;
     text-decoration: none;
     color: #BC9CFF;
 }
-.button_header_transparent {
+.button_header_login {
     position: absolute;
     top: 18px;
     width: 87px;
@@ -59,7 +66,7 @@
     border: 2px solid #BC9CFF; 
     /*border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) ;  */
 }
-.button_header_color {
+.button_header_registration {
     position: absolute;
     top: 18px;
     width: 196px;
@@ -69,7 +76,7 @@
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .button_form:hover,
-.button_header_color:hover{
+.button_header_registration:hover{
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     opacity: 0.5;
     text-decoration: none;
