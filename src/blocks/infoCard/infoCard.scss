@@ -58,8 +58,24 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
 }
-.info-card .datepicker-group {
+.info-card__input_date{
     margin-bottom: 20px;
+    width: 150px;
+    height: 44px;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.25);
+
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+}
+.info-card__datepicker_check-in {
+    float: left;
+}
+.info-card__datepicker_check-out {
+    float: right;
 }
 .info-card__guests{
     margin-bottom: 20px;
@@ -120,4 +136,11 @@ th.border-results {
 }
 .info-card__title_h3{
     margin-bottom: 5px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
 }
