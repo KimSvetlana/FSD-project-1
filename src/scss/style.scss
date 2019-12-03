@@ -14,19 +14,21 @@
 @import "../blocks/footer/footer.scss";
 @import "../blocks/header/header.scss";
 @import "../blocks/infoCard/infoCard.scss";
+@import "../blocks/informationDetails/informationDetails";
 @import "../blocks/input/input.scss";
 @import "../blocks/inputRadio/inputRadio.css";
 @import "../blocks/likeButton/likeButton.scss";
 @import "../blocks/loginForm/LoginForm.scss";
 @import "../blocks/pagination/pagination.scss";
+@import "../blocks/reviewsBlock/reviewsBlock.scss";
 @import "../blocks/quantityBlock/quantityBlock.scss";
 @import "../blocks/sliderRange/sliderRange.scss";
 @import "../blocks/socialВаг/socialBar.scss";
 
-@import "../pages/index/index";
-@import "../pages/filter/filter";
-@import "../pages/page4/page4";
-@import "../pages/roomDetails/roomDetails";
+@import "../pages/index/index.scss";
+@import "../pages/filter/filter.scss";
+@import "../pages/page4/page4.scss";
+@import "../pages/roomDetails/roomDetails.scss";
 
 @import url(http://allfont.ru/allfont.css?fonts=quicksand-bold);
 
