@@ -1,10 +1,13 @@
 .registration-form {
-    //  display: none;
+    display: none;
     position: absolute;
     width: 380px;
     height: 646px; 
-    left: 530px;
+    // left: 530px;
     top: 30px;
+    right: 0;
+    left:0;
+    margin: auto;
 
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.12);
@@ -14,7 +17,12 @@
 
     padding-top: 39px;
     padding-left: 29px;
-    padding-right: 29px;    
+    padding-right: 29px; 
+    
+    &.active{
+        display:block;
+        z-index: 100; 
+    }
 }
 .registration__group_first {
     margin-top: 20px;
