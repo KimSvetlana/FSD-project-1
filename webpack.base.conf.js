@@ -31,47 +31,36 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
-        publicPath: '/'
+        publicPath: './'
     },
     module: {
         rules: [
-            {
+        {
             test: /\.pug$/,
             loader: 'pug-loader'
-            }, {
+        },  {
             test: /\.js$/,
             loader: 'babel-loader',
             exclude: '/node_modules/'
-        }, 
-        
-        //{ 
-        //     test: /\.(png|jpg|gif)$/, 
-        //     use: [
-        //   {
-        //     loader: 'url-loader',
-        //     options: {
-        //       limit: 8192,
-        //     },
-        //   },  ],
-        {
+        }, {
             test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
             use: [{
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                // outputPath: './fonts/',    // where the fonts will go
-                // publicPath: '../'       // override the default path
+                outputPath: './assets/fonts/',    // where the fonts will go
+                publicPath: '../fonts/'       // override the default path
               }
             }]
-        },  {
+        }, {
              test: /\.(png|jpg|gif|svg)$/,
              loader: 'file-loader',
              options: {
              name: '[name].[ext]',
-            //  outputPath: './img/',
-            //  publicPath: '../'
-             }
-        }, {
+             outputPath: './img/',
+             publicPath: '../img/'
+            }
+        },  {
             test: /\.css$/,
             use: [
                 'style-loader',
@@ -119,7 +108,6 @@ module.exports = {
         })),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-            { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: `${PATHS.assets}` },
         ]),
     ]
