@@ -1,0 +1,19 @@
+.review__item_1,
+.review__item_2 {
+    position: relative;
+    padding-left: 56px;
+    margin-bottom: 23px;
+}
+.review__item_1{
+    background: url(../img/photo1.png) no-repeat;
+    background-position-x: -21px;
+    background-position-y: -11px;
+}
+.review__item_2{
+    background: url(../img/photo2.png) no-repeat;
+    background-position-x: -21px;
+    background-position-y: -11px;
+}
+.review__author {
+    margin-bottom: 10px;
+}

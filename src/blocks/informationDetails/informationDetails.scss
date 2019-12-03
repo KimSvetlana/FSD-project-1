@@ -1,0 +1,31 @@
+.information__details_comfort,
+.information__details_convenience,
+.information__details_cosiness{
+    position: relative;
+    box-sizing: border-box;
+    width:280px;
+    height: 89px;
+    padding-top: 20px;
+    padding-left: 58px;
+}
+.information__details_comfort,
+.information__details_convenience{
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
+
+.room-information__icon {
+    position: absolute;
+    margin-top: 4px;
+    left: 0;
+    
+    font-size: 48px;
+    line-height: 41px;
+    color: #BC9CFF;
+}
+.room-infotmation__title_h6{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}

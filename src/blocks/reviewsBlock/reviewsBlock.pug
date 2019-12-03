@@ -1,0 +1,7 @@
+mixin reviewsBlock(class_, authorName, when, content)
+    blockquote(class=class_)
+        include ../../blocks/likeButton/likeButton
+        .review__author
+            h6.room-infotmation__title_h6 #{authorName}
+            p #{when}
+        p #{content}

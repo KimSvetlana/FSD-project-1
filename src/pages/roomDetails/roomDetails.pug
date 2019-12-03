@@ -1,4 +1,7 @@
 extends ../../blocks/layout/main
+include ../../blocks/svgWithLinearGradient/svg
+include ../../blocks/reviewsBlock/reviewsBlock
+include ../../blocks/informationDetails/informationDetails
 
 block variables
 	- var title = 'Страиница пять';
@@ -6,99 +9,56 @@ block variables
 	- var pageClass = 'page4';
 
 block content
-	div.container.room-details(class="page5-content")
-		.foto-room
+	div.container.room-details__content
+		.content__room-foto
 			.foto-left
 			.foto-right
-				.foto-right-1
-				.foto-right-2
-		.room-content
-			.infornation
-				.room-details-card
-					h3 Сведения о номере
-					.comfort
-						i.material-icons mood
-						h6 Комфорт
-						p Шумопоглощающие стены
-					.convenience
-						i.material-icons location_city
-						h6 Удобство
-						p Окно в каждой из спален
-					.cosiness
-						i.material-icons whatshot
-						h6 Уют
-						p Номер оснащён камином
-				.impression
-					h3 Впечатления от номера
+				.foto-right_1
+				.foto-right_2
+		.content__room-information
+			.room-information
+				.room-information__details
+					h3.room-infotmation__title_h3 Сведения о номере
+					+informationDetails('information__details_comfort', "mood", "Комфорт", "Шумопоглощающие стены")
+					+informationDetails('information__details_convenience', "location_city", "Удобство", "Окно в каждой из спален")
+					+informationDetails('information__details_cosiness', "whatshot", "Уют", "Номер оснащён камином")
+				.room-information__impression
+					h3.room-infotmation__title_h3 Впечатления от номера
 					ul
-						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-								<circle cx="5" cy="5" r="5" fill="url(#paint0_linear)"/>
-								<defs>
-									<linearGradient id="paint0_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-										<stop stop-color="#FFE39C"/>
-										<stop offset="1" stop-color="#FFBA9C"/>
-									</linearGradient>
-								</defs>
-								</svg> Великолепно
-						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-							<circle cx="5" cy="5" r="5" fill="url(#paint1_linear)"/>
-							<defs>
-								<linearGradient id="paint1_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#6FCF97"/>
-									<stop offset="1" stop-color="#66D2EA"/>
-								</linearGradient>
-							</defs>
-							</svg>Хорошо
-						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-							<circle cx="5" cy="5" r="5" fill="url(#paint2_linear)"/>
-							<defs>
-								<linearGradient id="paint2_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#BC9CFF"/>
-									<stop offset="2" stop-color="#8BA4F9"/>
-								</linearGradient>
-							</defs>
-							</svg> Удовлетворительно
-						li <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-							<circle cx="5" cy="5" r="5" fill="url(#paint3_linear)"/>
-							<defs>
-								<linearGradient id="paint3_linear" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#919191"/>
-									<stop offset="1" stop-color="#3D4975"/>
-								</linearGradient>
-							</defs>
-							</svg> Разочарован
-				.reviews
-					h3 Отзывы посетителей номера
-					.reviews-list
-						blockquote(class="review-item")
-							include ../../blocks/likeButton/likeButton
-							.review-author
-								h6 Мурад Сарафанов
-								p 5 дней назад
-							p Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей
-						blockquote(class="review-item")
-							include ../../blocks/likeButton/likeButton
-							.review-author
-								h6 Патрисия Стёклышкова
-								p Неделю назад
-							p Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
-				.rule-box
-					.rules
-						h3 Правила
+						li
+							+svgLinearGradient("paint0_linear", "#FFE39C","#FFBA9C") 
+							span Великолепно
+						li
+							+svgLinearGradient("paint1_linear", "#6FCF97","#66D2EA")
+							span Хорошо
+						li
+							+svgLinearGradient("paint2_linear", "#BC9CFF","#8BA4F9")
+							span Удовлетворительно
+						li
+							+svgLinearGradient("paint3_linear", "#919191", "#3D4975")
+							span Разочарован
+				.room-information__reviews
+					h3.room-infotmation__title_h3 Отзывы посетителей номера
+					.reviews__list
+						+reviewsBlock("review__item_1", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей")
+						+reviewsBlock("review__item_2", "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
+				.room-information__rule-box
+					.rule-box__rules
+						h3.room-infotmation__title_h3 Правила
 						ul
-							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
-								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
-								</svg> Нельзя с питомцами
-							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
-								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
-								</svg> Без вечеринок и мероприятий
-							li <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
-								<ellipse cx="5.21429" cy="5" rx="5.21429" ry="5" fill="#1F2041" fill-opacity="0.25"/>
-								</svg> Время прибытия — после 13:00, а выезд до 12:00
-					.repeal
-						h3 Отмена
+							li
+								+svg
+								span Нельзя с питомцами
+							li
+								+svg
+								span Без вечеринок и мероприятий
+							li
+								+svg
+								span Время прибытия — после 13:00, а выезд до 12:00
+					.rule-box__repeal
+						h3.room-infotmation__title_h3 Отмена
 						p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 		  			
 
-			.info-card
+			.room-information__info-card
 				include ../../blocks/infoCard/infoCard
