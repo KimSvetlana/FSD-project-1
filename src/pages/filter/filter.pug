@@ -10,46 +10,36 @@ block variables
 	- var pageClass = 'filter-page';
 
 block content
-	.container.catalog  
-		.filter
-			.filter-group.datepicker
-				h3 даты пребывания в отеле
-				input(type="text" class="form-control сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
-			.filter-group.guests
-				h3 гости
+	.container.filter-page__content  
+		.content__filter-menu
+			.menu-group__datepicker
+				h3.menu-group__title_h3.datepicker даты пребывания в отеле
+				input(type="text" class="filter__datepicker сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+			.menu-group__guests
+				h3.menu-group__title_h3.guests гости
 				include ../../blocks/dropdown/dropdown
 				//- +dropdown("dropdown-guests", "Сколько гостей", "Взрослые", "Дети", "Младенцы")
-								
-				//- div.select
-				//- 	<a href="javascript:void(0);" class="slct">Сколько гостей</a>
-				//- 	<ul class="drop">
-				//- 		<li><a href="">Взрослые</a>
-				//- 			<input type="number">
-				//- 		</li>
-				//- 		<li><a href="">Дети</a></li>
-				//- 		<li><a href="">Младенцы</a></li>
-				//- 	</ul>
-				//- 	<input type="hidden" id="select" />
-
-			.filter-group.cost
+			.menu-group__cost
 				include ../../blocks/sliderRange/sliderRange
-			.filter-group.checkbox-1
-				h3 Checkbox Buttons
+			.menu-group__checkbox-group_1
+				h3.menu-group__title_h3 Checkbox Buttons
 				+checkbox("checkbox-1", "checkbox-1", "Можно курить", "")
 				+checkbox("checkbox-2", "checkbox-2", "Можно с питомцами", "", "checked")
 				+checkbox("checkbox-3", "checkbox-3", "Можно пригласить гостей (до 10 человек)", "", "checked")
-			.filter-group.checkbox-2
-				h3 Доступность
-				+checkbox("checkbox-4", "checkbox-4", "Широкий коридор", " Ширина коридоров в номере не менее 91 см.")
-				+checkbox("checkbox-5", "checkbox-5", "Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
-			.filter-group.comfort
-				h3 удобства номера
+			.menu-group__checkbox-group_2
+				h3.menu-group__title_h3 Доступность
+				.checkbox-group__checkbox-1
+					+checkbox("checkbox-4", "checkbox-4", "Широкий коридор", " Ширина коридоров в номере не менее 91 см.")
+				.checkbox-group__checkbox-2
+					+checkbox("checkbox-5", "checkbox-5", "Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
+			.menu-group__comfort
+				h3.menu-group__title_h3.comfort удобства номера
 				include ../../blocks/dropdownComfort/dropdownComfort
-				//- +dropdown("dropdown-comfort", "Удобства номера", "спальни", "кровати", "ванные комнаты")
-			.filter-group.checkbox-list(id = "container-list")
+				//- +dropdown("-comfort", "Удобства номера", "спальни", "кровати", "ванные комнаты")
+			.menu-group__checkbox-list(id = "container-list")
 				ul.expandable-checkbox-list
 					li
-						h3 дополнительные удобства
+						h3.menu-group__title_h3 дополнительные удобства
 						ul.sub-menu
 							<li>
 								+checkbox("checkbox-6", "checkbox-6", "Завтрак")
@@ -70,11 +60,11 @@ block content
 						</ul>
 					</li>
 					li 
-				i.material-icons.checkbox-list(id = "checkbox-icon") expand_more
+				i.material-icons.checkbox-list__icon(id = "checkbox-icon") expand_more
 					
-		.room-list
-			h1 Номера, которые мы для вас подобрали
-			.sort
+		.content__room-list
+			h1.room-list__title_h1 Номера, которые мы для вас подобрали
+			.room-list__sort
 				//- include ../includes/cardsRoom
 				+cardsRoom("./assets/img/imageRoom0.jpg", "888", "9 990₽", "145", "люкс", 5)
 				+cardsRoom("./assets/img/imageRoom2.jpg", "840", "9 900₽", "65", "", 4)
