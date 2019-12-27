@@ -4,3 +4,8 @@
   background: url(../img/image4.jpg) no-repeat;
   background-position-y: -70px;
 }
+@media(max-width: $smDesktopWidth) {
+  .page4-content{
+    height:630px;
+  }
+}

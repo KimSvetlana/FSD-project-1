@@ -5,7 +5,7 @@
 @import "utils/reset";
 
 @import "../blocks/accountRegistrationForm/accountRegistrationForm.scss";
-@import "../blocks/button/button.css";
+@import "../blocks/button/button.scss";
 @import "../blocks/cardsRoom/cardsRoom.scss";
 @import "../blocks/checkbox/checkbox.css";
 @import "../blocks/datepicker/datepicker.scss";
@@ -37,15 +37,15 @@ html {
 	font-size: $mainFontSize;
 	color: $mainFontColor;
   height: 100%;
-  @media screen and (max-width: $desktopWidth) {
-		font-size: 16px;
+  @media(min-width:$tableWidth) and (max-width: $smDesktopWidth){
+		font-size: 12px;
   }
-  @media screen and (max-width: $tableWidth) {
-		font-size: 15px;
-  }
-  @media screen and (max-width: $phoneWidth) {
-		font-size: 14px;
-  }
+  // @media screen and (max-width: $tableWidth) {
+	// 	font-size: 15px;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+	// 	font-size: 14px;
+  // }
 }
 
 body {
@@ -102,19 +102,39 @@ section, .section {
 
 .container {
   width: 100%;
-  flex: 0 0 auto;
+  // flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
   max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
+  // font-size: $mainFontSize;
+
+  padding-right: 140px;
+  padding-left: 140px;
+  @media(min-width: 981px) and (max-width: 1200px){
+    
+    padding-right: 40px;
+    padding-left: 40px;
   }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
+  @media(max-width: $smDesktopWidth) {
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 12px;
   }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
+  @media(min-width: $smPhoneWidth) and (max-width:767px) {
+    width: 320px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+  
+  // @media screen and (max-width: $smDesktopWidth) {
+  //   max-width: tableWidth;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+  //   max-width: phoneWidth;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+  //   max-width: smPhoneWidth;
+  // }
 }
 
 // Modules

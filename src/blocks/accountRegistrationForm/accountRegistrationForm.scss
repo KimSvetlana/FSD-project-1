@@ -3,7 +3,6 @@
     position: absolute;
     width: 380px;
     height: 646px; 
-    // left: 530px;
     top: 30px;
     right: 0;
     left:0;
@@ -24,21 +23,31 @@
         z-index: 100; 
     }
 }
+@media(max-width: $smDesktopWidth) {
+    .registration-form{
+        width: 300px;
+        height: 596px;
+        top: 15px;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;  
+    }
+}
 .registration__group_first {
     margin-top: 20px;
 }
 .registration__group_second{
     margin-top: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .registration__group_third{
     margin-bottom: 23px;
 }
 
-.registration__group_first input:first-of-type,
-.registration__group_second input:first-of-type,
-.registration__group_third input:first-of-type  {
+.registration__group_first .input-wrapper:first-of-type,
+.registration__group_second .input-wrapper:first-of-type,
+.registration__group_third .input-wrapper:first-of-type  {
     margin-bottom: 10px;
 }
 .registration__title_h2{
@@ -48,6 +57,12 @@
     font-size: 24px;
     line-height: 30px;
     color: #1F2041;
+}
+@media(max-width: $smDesktopWidth) {
+    .registration__title_h2 {
+        font-size: 20px;
+        line-height: 25px;
+    } 
 }
 .registration__title_h3{
     font-weight: bold;
@@ -61,10 +76,12 @@
     position: relative;
     display: inline-block;
     margin-right: 20px;
+    margin-top: 10px;
 }
 .custom-switch {
     position: relative;
     margin-right: 10px;
+    margin-top: 10px;
 }
 .registration-form p {
     float: left;

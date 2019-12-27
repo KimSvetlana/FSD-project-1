@@ -9,14 +9,16 @@ block variables
 	- var pageClass = 'page4';
 
 block content
-	div.container.room-details__content
+	div.room-details__content
 		.content__room-foto
 			.foto-left
 			.foto-right
 				.foto-right_1
 				.foto-right_2
-		.content__room-information
+		.container.content__room-information
 			.room-information
+				.room-information__info-card
+					include ../../blocks/infoCard/infoCard
 				.room-information__details
 					h3.room-infotmation__title_h3 Сведения о номере
 					+informationDetails('information__details_comfort', "mood", "Комфорт", "Шумопоглощающие стены")
@@ -38,7 +40,9 @@ block content
 							+svgLinearGradient("paint3_linear", "#919191", "#3D4975")
 							span Разочарован
 				.room-information__reviews
-					h3.room-infotmation__title_h3 Отзывы посетителей номера
+					.room-information__reviews-title
+						h3.room-infotmation__title_h3 Отзывы посетителей номера
+						p.room-information__reviws-number 2 отзыва
 					.reviews__list
 						+reviewsBlock("review__item_1", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей")
 						+reviewsBlock("review__item_2", "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент")
@@ -60,5 +64,5 @@ block content
 						p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 		  			
 
-			.room-information__info-card
-				include ../../blocks/infoCard/infoCard
+			//- .room-information__info-card
+			//- 	include ../../blocks/infoCard/infoCard

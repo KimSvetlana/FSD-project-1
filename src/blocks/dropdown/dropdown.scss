@@ -39,11 +39,21 @@
     background-color: white;
     z-index: 150;
 }
+@media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
+    .dropdown__child{
+        width: 266px;
+    }
+}
 .dropdown-comfort .dropdown__child {
     height: 119px;
 }
+.info-card__guests .dropdown__child,
 form .dropdown__child {
     width: 320px;
+    
+    @media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
+        width: 266px;
+    }
 }
 .lincks__save {
     font-family: Montserrat;
