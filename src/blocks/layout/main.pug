@@ -8,7 +8,7 @@ html(lang='ru')
     meta(charset='utf-8')
     title #{title}
     meta(name="description", content=description)
-    link(rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.css")
+    link(rel="stylesheet" href="assets/fonts/css/font-awesome.min.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
     //- link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css")
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
@@ -16,217 +16,56 @@ html(lang='ru')
 
   block head
   body(class=pageClass)
-    //-.wrapper
     include ../header/header
-        //- .content-wrapper
     block content
     include ../footer/footer
     include ../socialВаг/socialВаг
 
     script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
     script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
-    script.
-      $('#dateFrom').datepicker({
-        inline: true,
-        firstDay: 1,
-        showOtherMonths: true,
-        dayNamesMin: ['Bc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
-      });
-      var monthNames = $( "#dateFrom" ).datepicker( "option", "monthNames" );
-      $( "#dateFrom" ).datepicker( "option", "monthNames", [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ] );
+    script
+      include ../datepicker/datepicker.js
       
-      $('#dateTo').datepicker({
-        inline: true,
-        firstDay: 1,
-        showOtherMonths: true,
-        dayNamesMin: ['Bc', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
-      });
-      var monthNames = $( "#dateTo" ).datepicker( "option", "monthNames" );
-      $( "#dateTo" ).datepicker( "option", "monthNames", [ 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь' ] );
-
-      var dates = $("#dateFrom, #dateTo").datepicker({
-        onSelect: function(selectedDate){
-          var option = this.id == "from" ? "minDate" : "maxDate",
-          instance = $( this ).data( "datepicker" ),
-          date = $.datepicker.parseDate(
-          instance.settings.dateFormat || $.datepicker._defaults.dateFormat,
-          selectedDate, instance.settings);
-          dates.not(this).datepicker("option", option, date);
-        }
-      });
-
     script(src="https://code.jquery.com/jquery-1.12.4.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
-    script.
-      $( function() {
-        $( "#slider-range" ).slider({
-          range: true,
-          step: 500,
-          min: 500,
-          max: 15000,
-          values: [ 5000, 10000 ],
-          slide: function( event, ui ) {
-            $( "#amount" ).val( ui.values[ 0 ] + "₽ - " + ui.values[ 1 ] + "₽");
-          }
-        });
-        $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
-          "₽ - " + $( "#slider-range" ).slider( "values", 1 ) + "₽" );
-      } );
+    script
+      include ../sliderRange/sliderRange.js
     
-      /* Select */
-    script.
-      $('.dropdown__select').click(function(){
-        /* Заносим выпадающий список в переменную */
-        var dropBlock = $(this).parent().find('.dropdown__child');
-        
-        /* Делаем проверку: Если выпадающий блок скрыт то делаем его видимым*/
-        if( dropBlock.is(':hidden') ) {
-          dropBlock.slideDown();
-          
-          /* Выделяем ссылку открывающую select */
-          $(this).addClass('active');
-          
-          /* Работаем с событием клика по элементам выпадающего списка */
-          $('.dropdown__child').find('div').click(function(){
-            
-            /* Заносим в переменную HTML код элемента списка по которому кликнули */
-            var selectResult = $(this).html();
-            
-            /* Находим наш скрытый инпут и передаем в него значение из переменной selectResult */
-            $(this).parent().parent().find('input').val(selectResult);
-            
-            /* Передаем значение переменной selectResult в ссылку которая открывает наш выпадающий список и удаляем активность */
-            $(this).parent().parent().find('.dropdown__select').removeClass('active').html(selectResult);
-            
-            /* Скрываем выпадающий блок */
-            dropBlock.slideUp();
-            });
-          
-          /* Продолжаем проверку: Если выпадающий блок не скрыт то скрываем его */
-        } else {
-          $(this).removeClass('active');
-          dropBlock.slideUp();
-        }
-        
-        /* Предотвращаем обычное поведение ссылки при клике */
-        return false;
-      });
-
-   
-    script.
-      $('.expandable-checkbox-list > li').on('click', function(e){
-      /* внутри нашего пункта меню находим "выпадашку" */
-        var $dropMenu = $(this).parent().find('.sub-menu');
-      /* если наш dropMenu видимый - скрываем, если скрыт - показываем */
-      if($dropMenu.is(':visible')){
-        $dropMenu.hide();
-      } else {
-         /* скрываем все видимые "выпадашки" на странице */
-        $('.dropMenu:visible').hide(); 
-        $dropMenu.show();
-      }
-      });
-    
-    script.
-      (function(document){
-        var div = document.getElementById('container-list');
-        var icon = document.getElementById('checkbox-icon');
-        var open = false;
-
-      div.addEventListener('click', function(){
-        if(open){
-          icon.className = 'material-icons checkbox-list__icon';  
-          } else{
-            icon.className = 'material-icons checkbox-list__icon open';
-          }
-        open = !open;
-      });
-      })(document);
-    
-
-    
-    script.
-      window.onload = function(){
-        var paginationPage = parseInt($('.cp').attr('actpage'), 10);
-        $('.cp_i').on('click', function(){
-          var go = $(this).attr('href').replace('#!', '');
-          if (go === '+1') {
-            paginationPage++;
-          } else if (go === '-1') {
-            paginationPage--;
-          }else{
-            paginationPage = parseInt(go, 10);
-          }
-        $('.cp').attr('actpage', paginationPage);
-        });
-      };
-  
     script.
       $(function() {
         (function quantityProducts() {
-          var $quantityArrowMinus = $(".quantity-arrow-minus");
-          var $quantityArrowPlus = $(".quantity-arrow-plus");
+          var $quantityArrowMinus = $(".quantity__arrow_minus");
+          var $quantityArrowPlus = $(".quantity__arrow_plus");
 
           $quantityArrowMinus.click(quantityMinus);
           $quantityArrowPlus.click(quantityPlus);
 
           function quantityMinus() {
-            var $quantityNum = $(this).parent().find(".quantity-num");
+            var $quantityNum = $(this).parent().find(".quantity__num");
             if ($quantityNum.val() > 1) {
               $quantityNum.val(+$quantityNum.val() - 1);
             }
           }
 
           function quantityPlus() {
-            var $quantityNum = $(this).parent().find(".quantity-num");
+            var $quantityNum = $(this).parent().find(".quantity__num");
             $quantityNum.val(+$quantityNum.val() + 1);
           }
         })();
       });
 
-    script.
-      $('.button_header_registration').click(function(){
-        $('.registration-form').addClass('active');
-      });
-
-  //- script.
-  //-   var registrationForm = document.querySelector('.registration-form');
-  //-   var loginForm = document.querySelector('.login-form');
-  //-   document.querySelector('.button_header_registration').onclick = function() {
-  //-     registrationForm.classList.add("active");
-  //-   };
-
-  //-   document.querySelector('.button_form_create').onclick = function() {
-  //-     registrationForm.classList.add("active");
-  //-   };
-    
-  //-   document.querySelector('.button_form_login').onclick = function() {
-  //-     registrationForm.classList.remove("active");
-  //-   };
-
     //- script.
-    //- var registrationForm = document.querySelector('.registration-form');
-    //- var loginForm = document.querySelector('.login-form');
-    //- document.querySelector('.button_form_create').onclick = function() {
-    //-   registrationForm.classList.add("active");
-
-    //- document.querySelector('.button_form_login').onclick = function() {
-    //-   registrationForm.classList.remove("active");
-    //- };
-
-    //- script.
-    //-   /* не работает */
-    //-   $(document).ready(function() {
-    //-     $("span").click(function(){
-    //-       $("input").attr('value', parseInt($("input").val()) + 1);
+    //-   $(function() {
+    //-     $('.quantity__arrow_minus').click(function () {
+    //-       var $quantityValue = $(this).parent().find('quantity__num');
+    //-       if ($quantityValue > 1) {
+    //-         $quantityValue.val(+$quantityValue.val() - 1);
+    //-       }
+    //-     });
+    //-     $('.quantity__arrow_plus').click(function () {
+    //-       var $quantityValue = $(this).parent().find('quantity__num');
+    //-        $quantityValue.val(+$quantityValue.val() + 1);
     //-     });
     //-   });
-
-    //- script.
-    //-   /* не работает */
-    //-   $(".reset").bind("click", function() {
-    //-     $('#myform')[0].reset();
-    //-   });
-
   
   //- block script
