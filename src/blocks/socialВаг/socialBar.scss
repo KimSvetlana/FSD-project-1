@@ -4,14 +4,19 @@
     padding-left: 140px;
     padding-right: 140px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    @media(min-width: $smPhoneWidth) and (max-width:767px) {
+        display: block; 
+    }
 }
 .footer__copyright{
-    float: left;
+    // float: left;
     margin-top: 26px;
     color: rgba(31, 32, 65, 0.75);
 }
 .footer__social {
-    float:right;
+    // float:right;
     margin-top: 23px;
 }
 .social__btn {
