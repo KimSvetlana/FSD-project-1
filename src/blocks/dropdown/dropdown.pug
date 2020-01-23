@@ -15,7 +15,7 @@
 //-                 include ../includes/quantityBlock
 //-         <input type="hidden" id="select" /> 
 
-.dropdown(id="myform")
+.dropdown(id="dropdown-guests")
     .dropdown__select 
         p Сколько гостей 
         i.material-icons.dropdown__icon expand_more
@@ -29,9 +29,9 @@
         .child__item
             p Младенцы
             include ../quantityBlock/quantityBlock
-        .dropdown__lincks
-            a.lincks__reset(href="#") Очистить
-            a.lincks__save(href="#") Применить
-    <input type="hidden" id="select" />
+        .dropdown__button
+            a.dropdown__button_reset(href="#") Очистить
+            a.dropdown__button_save(href="#") Применить
+    //- <input type="hidden" id="select" />
     
     //- a href="javascript:void(0);

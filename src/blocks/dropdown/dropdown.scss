@@ -21,7 +21,8 @@
     float: left;
 }
 .dropdown__select.active {
-    border-radius: 4px 4px 0 0;
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    // border-radius: 4px 4px 0 0;
     border-bottom: none;
 }
 .dropdown__child {
@@ -37,45 +38,70 @@
     border-bottom-right-radius: 2px;
     padding: 7px 7px 7px 15px;
     background-color: white;
-    z-index: 150;
-}
-@media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
-    .dropdown__child{
-        width: 266px;
+    z-index: 3;
+    @media(min-width: $smPhoneWidth) and (max-width: 767px) {
+        width: 300px;
     }
 }
+// @media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
+//     .dropdown__child{
+//         width: 266px;
+//     }
+// }
 .dropdown-comfort .dropdown__child {
     height: 119px;
 }
-.info-card__guests .dropdown__child,
 form .dropdown__child {
     width: 320px;
     
-    @media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
-        width: 266px;
+    @media(min-width: $smPhoneWidth) and (max-width: 980px) {
+        width: 268px;
     }
 }
-.lincks__save {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #BC9CFF;
-    float:right;
-    margin-top: 20px;
+.info-card__guests .dropdown__child {
+    width: 320px;
+    
+    @media(min-width: $smPhoneWidth) and (max-width: 767px) {
+        width: 268px;
+    }
 }
-.lincks__reset {
+.dropdown__button{
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    text-transform: uppercase;
-    color: rgba(31, 32, 65, 0.5);
-    float:left;
     margin-top: 20px;
+    text-transform: uppercase;
+
+    &_save{
+        color: #BC9CFF;
+        float:right;
+
+        &:hover{
+            color: #BC9CFF;
+        }
+
+        &:active{
+            color: rgba(31, 32, 65, 0.5);
+            text-decoration: none;
+        }
+    }
+
+    &_reset{
+        display: none;
+        color: rgba(31, 32, 65, 0.5);
+        float:left;
+
+        &:hover{
+            color:rgba(31, 32, 65, 0.5);
+        }
+        
+        &:active{
+            color: #BC9CFF;
+            text-decoration: none;
+        }
+    }
 }
 .child__item {
     padding:0px;
@@ -101,10 +127,11 @@ form .dropdown__child {
     float: right;
 }
 .dropdown__icon{
+    float: right;
     transform: rotate(0deg);
     transition: transform 0.5s linear;
 }
 .dropdown__icon.active{
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     transition: transform 0.5s linear;
 }
