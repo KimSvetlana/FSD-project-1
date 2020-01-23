@@ -30,42 +30,5 @@ html(lang='ru')
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     script
       include ../sliderRange/sliderRange.js
-    
-    script.
-      $(function() {
-        (function quantityProducts() {
-          var $quantityArrowMinus = $(".quantity__arrow_minus");
-          var $quantityArrowPlus = $(".quantity__arrow_plus");
-
-          $quantityArrowMinus.click(quantityMinus);
-          $quantityArrowPlus.click(quantityPlus);
-
-          function quantityMinus() {
-            var $quantityNum = $(this).parent().find(".quantity__num");
-            if ($quantityNum.val() > 1) {
-              $quantityNum.val(+$quantityNum.val() - 1);
-            }
-          }
-
-          function quantityPlus() {
-            var $quantityNum = $(this).parent().find(".quantity__num");
-            $quantityNum.val(+$quantityNum.val() + 1);
-          }
-        })();
-      });
-
-    //- script.
-    //-   $(function() {
-    //-     $('.quantity__arrow_minus').click(function () {
-    //-       var $quantityValue = $(this).parent().find('quantity__num');
-    //-       if ($quantityValue > 1) {
-    //-         $quantityValue.val(+$quantityValue.val() - 1);
-    //-       }
-    //-     });
-    //-     $('.quantity__arrow_plus').click(function () {
-    //-       var $quantityValue = $(this).parent().find('quantity__num');
-    //-        $quantityValue.val(+$quantityValue.val() + 1);
-    //-     });
-    //-   });
   
   //- block script
