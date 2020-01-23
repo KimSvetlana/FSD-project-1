@@ -13,6 +13,10 @@
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
+    
+    @media(min-width: $smPhoneWidth) and (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .menu-group__guests {
@@ -89,11 +93,6 @@
 }
 .filter-page__content {
     min-height: 1357px;
-    // padding-left: 140px;
-    // padding-right: 140px;
-    // display: grid;
-    // grid-template-columns: 266px 834px;
-    // grid-gap: 60px; 
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
@@ -105,7 +104,6 @@
     }
 }
 .content__filter-menu {
-    // grid-column: 1/2;
     width: 266px;
     margin-right: 20px;
 }
@@ -115,7 +113,6 @@
     }
 }
 .content__room-list {
-    // grid-column: 2/3;
     width: 834px;
 }
 @media(min-width: $smPhoneWidth) and (max-width: 767px) {
@@ -134,11 +131,6 @@
     margin-bottom: 21px;
 }
 .room-list__sort {
-    // display: grid;
-    // grid-template-columns: repeat(3, 270px);
-    // grid-column-gap: 12px;
-    // grid-template-rows: repeat(4, 257px);
-    // grid-row-gap: 21px;  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between  
@@ -160,5 +152,26 @@
     position: absolute;
     display: none;
     list-style: none;
-    // margin-top: 17.44px;
+    @media(min-width: $smPhoneWidth) and (max-width: 767px) {
+        width: 300px;
+        z-index: 2;
+        background-color: white;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 890px) {
+    .content__room-list {
+        width: 280px;
+    }
+    .filter-page__content {
+        justify-content: center;
+    }
+}
+@media(min-width:891px) and (max-width: 1400px) {
+    .content__room-list {
+        width: 548px;
+    }
+    .filter-page__content {
+        justify-content: center;
+    }
 }
