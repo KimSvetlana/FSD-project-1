@@ -75,11 +75,11 @@ form .dropdown__child {
     text-transform: uppercase;
 
     &_save{
-        color: #BC9CFF;
+        color: $primary-color ;
         float:right;
 
         &:hover{
-            color: #BC9CFF;
+            color: $primary-color;
         }
 
         &:active{
@@ -98,7 +98,7 @@ form .dropdown__child {
         }
         
         &:active{
-            color: #BC9CFF;
+            color: $primary-color ;
             text-decoration: none;
         }
     }

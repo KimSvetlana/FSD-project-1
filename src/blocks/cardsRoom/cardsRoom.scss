@@ -97,7 +97,7 @@
     letter-spacing: 1px;
 }
 .cards__lux{
-    color: #BC9CFF;
+    color: $primary-color ;
 }
 .cards__cost {
     float: right;
@@ -119,7 +119,7 @@
     float: left;
 }
 .cards__icons_rating{
-    color:#BC9CFF;
+    color: $primary-color;
 }
 .cards__reviews{
     float: right;
