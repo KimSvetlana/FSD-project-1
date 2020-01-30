@@ -42,7 +42,7 @@
     width: 15px;
     height: 15px;
 
-    background: url("../../img/Vector.png") no-repeat;
+    background: url("../img/Vector.png") no-repeat;
     /* background-size: 12px 12px; */
     opacity: 0;
 
@@ -54,7 +54,7 @@
     transition: opacity .1s linear;
 }
 .checkbox__input:checked + .checkbox__label:before {
-    border: 1px solid #BC9CFF;
+    border: 1px solid $primary-color ;
 }
 
 .checkbox__input:checked + .checkbox__label:after {
