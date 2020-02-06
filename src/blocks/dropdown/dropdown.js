@@ -1,4 +1,3 @@
-
 $('.dropdown__select').click(function(){
 
     // Найдем id дропдауна
@@ -34,20 +33,47 @@ $('.dropdown__select').click(function(){
           quantitySum += +quantityNum;
         });
 
+        var resultStringGuests = ""
+        if (quantitySum < 1){
+          resultStringGuests += "Сколько гостей"
+        }
+        if (quantitySum === 1){
+          resultStringGuests += `${quantitySum} гость`
+        }
+        if (quantitySum >= 2 && quantitySum <= 4 ){
+          resultStringGuests += `${quantitySum} гостя`
+        }
+        if (quantitySum >= 5){
+          resultStringGuests += `${quantitySum} гостей`
+        }
+        console.log(resultStringGuests);
+
 
         var quantityBedrooms = dropBlock.find('.child__item:first-child').find('.quantity__num').val();
         var quantityBeds = dropBlock.find('.child__item:nth-child(2)').find('.quantity__num').val();
         var quantityBathrooms = dropBlock.find('.child__item:last-child').find('.quantity__num').val();
-        console.log(quantityBedrooms, quantityBeds, quantityBathrooms);
 
+        var resultString = '';
+          if(quantityBedrooms > 0){
+            resultString += `${quantityBedrooms} спальни, `
+          }
+          if(quantityBeds > 0){
+            resultString += `${quantityBeds} кровати, `
+          }
+          if(quantityBathrooms > 0){
+            resultString += `${quantityBathrooms} ванные комнаты`
+          }
+        console.log(resultString);
+        
         // Записываем сумму гостей в селектор
         if(idElement === "dropdown-guests"){
-
+          
           if (quantitySum < 1){
             thisSelector.find('p').html("Сколько гостей");
           }
 
-          thisSelector.find('p').html(quantitySum + " гостей");
+          // thisSelector.find('p').html(quantitySum + " гостя");
+          thisSelector.find('p').html(resultStringGuests);
         }
         else{
           
@@ -55,15 +81,10 @@ $('.dropdown__select').click(function(){
             thisSelector.find('p').html("Удобства номера");
           }
           else{
-            thisSelector.find('p').html(quantityBedrooms + " спальни, " + quantityBeds + " кровати, " + quantityBathrooms + " ванные комнаты" )
+            thisSelector.find('p').html(resultString )
           }
         }
         
-        
-        // if (quantitySum < 1){
-        //   thisSelector.find('p').html("Сколько гостей");
-        // }
-       
         // Кнопка Очистки появлется, когда гостей больше 0
         var resetButton = dropBlock.find(".dropdown__button_reset");
         if (quantitySum > 0) {

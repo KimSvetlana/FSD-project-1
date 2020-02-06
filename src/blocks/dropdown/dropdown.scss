@@ -3,26 +3,23 @@
     box-sizing: border-box;
 	border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
- 	// width: 266px;
     height: 44px;
     color: rgba(31, 32, 65, 0.75);
     padding-left: 15px;
     padding-right: 10px;
     padding-top: 12px;
-
+}
+.dropdown__select p {
+    float: left;
     /*обрезаем текст чтобы не вылезал за рамку*/
+    width: 160px;
  	overflow: hidden;
  	white-space:nowrap;
  	text-overflow: ellipsis;
  	-o-text-overflow: ellipsis;	
-
-}
-.dropdown__select p {
-    float: left;
 }
 .dropdown__select.active {
     border: 1px solid rgba(31, 32, 65, 0.5);
-    // border-radius: 4px 4px 0 0;
     border-bottom: none;
 }
 .dropdown__child {
@@ -43,11 +40,7 @@
         width: 300px;
     }
 }
-// @media(min-width: $smPhoneWidth) and (max-width: $tableWidth) {
-//     .dropdown__child{
-//         width: 266px;
-//     }
-// }
+
 .dropdown-comfort .dropdown__child {
     height: 119px;
 }
