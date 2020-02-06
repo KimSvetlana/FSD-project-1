@@ -10,9 +10,7 @@ html(lang='ru')
     meta(name="description", content=description)
     link(rel="stylesheet" href="assets/fonts/css/font-awesome.min.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
-    //- link(rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css")
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
-
 
   block head
   body(class=pageClass)
@@ -20,15 +18,17 @@ html(lang='ru')
     block content
     include ../footer/footer
     include ../socialВаг/socialВаг
-
-    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-    script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
-    script
-      include ../datepicker/datepicker.js
-      
+    
     script(src="https://code.jquery.com/jquery-1.12.4.js")
     script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
     script
       include ../sliderRange/sliderRange.js
   
+    //- <link href="D:\Света\FSD_project_1\dist\airDatepicker\css/datepicker.min.css" rel="stylesheet" type="text/css">
+    //- <script src="D:\Света\FSD_project_1\dist\airDatepicker\js/datepicker.min.js"></script>
+
+    //- <link href="./airDatepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    //- <script src="./airDatepicker/js/datepicker.min.js"></script>
+    //- //- script
+    //- //-   include ../datepicker/datepicker.js
   //- block script
