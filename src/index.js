@@ -1,6 +1,5 @@
 import './scss/style.scss';
 import 'bootstrap';
-import './js/jquery.formstyler';
 
 import './pages/filter/filter.js';
 import './blocks/button/button.js';
