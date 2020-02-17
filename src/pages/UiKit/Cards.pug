@@ -1,0 +1,19 @@
+include ../../blocks/cardsRoom/cardsRoom
+
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+    link(rel="stylesheet" href="assets/fonts/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+
+    body.conteiner.cards-page
+        include ../../blocks/datepickerForm/datepickerForm
+        include ../../blocks/infoCard/infoCard
+        include ../../blocks/loginForm/LoginForm
+        include ../../blocks/accountRegistrationForm/accountRegistrationForm
+        +cardsRoom("./assets/img/imageRoom0.jpg", "888", "9 990₽", "145", "люкс", 5)
+        +cardsRoom("./assets/img/imageRoom2.jpg", "840", "9 900₽", "65", "", 4)

@@ -31,6 +31,8 @@
 @import "../pages/page4/page4.scss";
 @import "../pages/roomDetails/roomDetails.scss";
 
+@import "../pages/UiKit/Cards.scss";
+
 @import url(http://allfont.ru/allfont.css?fonts=quicksand-bold);
 
 html {
@@ -103,7 +105,7 @@ section, .section {
 
 .container {
   width: 100%;
-  // flex: 0 0 auto;
+  
   position: relative;
   margin: 0 auto;
   max-width: $desktopWidth;
