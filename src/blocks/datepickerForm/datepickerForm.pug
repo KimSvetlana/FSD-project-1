@@ -5,16 +5,11 @@ include ../button/button
         h2.datepicker__title_h2 Найдём номера под ваши пожелания
         .datepicker__group(class="date-сheck-in")
             h3.datepicker__title_h3 прибытие
-            input(type="text" class="datepicker_input сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
-            //- include ../includes/datepicker
+            input(type="text" data-range="true" class="datepicker_input сheck-in" id='check_in' placeholder="ДД.ММ.ГГГГ")
         .datepicker__group(class="date-check-out")
             h3.datepicker__title_h3 выезд
-            input(type="text" class="datepicker_input check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
+            input(type="text" class="datepicker_input check-out" id='check_out' placeholder="ДД.ММ.ГГГГ")
         .datepicker__group
             h3.datepicker__title_h3 гости
-            include ../dropdown/dropdown
-            //- select(name="guests" class="form-control" id="guests" placeholder="Сколько гостей")
-            //-     option Взрослые
-            //-     option Дети
-            //-     option Младенцы        
+            include ../dropdown/dropdown    
         +button('button_form', "./filter.html", 'подобрать номер', 'arrow_forward' )
