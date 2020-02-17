@@ -6,10 +6,12 @@ include ../button/button
         p.cost  <span class= "room-cost">9 990 ₽</span> в сутки 
     .info-card__datepicker_check-in
         h3.info-card__title_h3 прибытие
-        input(type="text" class="info-card__input_date сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+        //- input(type="text" class="info-card__input_date сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+        input(type="text" data-range="true" class="datepicker_input сheck-in" id='check_in' placeholder="ДД.ММ.ГГГГ")
     .info-card__datepicker_check-out
         h3.info-card__title_h3 выезд
-        input(type="text" class="info-card__input_date check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
+        //- input(type="text" class="info-card__input_date check-out" id="dateTo" placeholder="ДД.ММ.ГГГГ")
+        input(type="text" class="datepicker_input check-out" id='check_out' placeholder="ДД.ММ.ГГГГ")
     .info-card__guests
         h3.info-card__title_h3 гости
         include ../dropdown/dropdown
