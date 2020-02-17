@@ -1,5 +1,5 @@
 $(function(){
-    var registrationForm = $('.registration-form');
+    var registrationForm = $('.registration-form-wrap');
 
     $('.button_header_registration').click(function(){
         registrationForm.addClass('active');

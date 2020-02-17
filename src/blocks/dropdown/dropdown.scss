@@ -47,13 +47,13 @@
 form .dropdown__child {
     width: 320px;
     
-    @media(min-width: $smPhoneWidth) and (max-width: 980px) {
+    @media(min-width: $smPhoneWidth) and (max-width: 767px) {
         width: 268px;
     }
 }
 .info-card__guests .dropdown__child {
     width: 320px;
-    
+   
     @media(min-width: $smPhoneWidth) and (max-width: 767px) {
         width: 268px;
     }

@@ -4,6 +4,28 @@
   background: url(../img/image4.jpg) no-repeat;
   background-position-y: -70px;
 }
+.login-form-wrap {
+  position: absolute;
+  top: 163px;
+  right: 0;
+  left:0;
+  margin: auto;
+  width: 380px;
+}
+.registration-form-wrap {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left:0;
+  margin: auto;
+  width: 380px;
+
+  &.active{
+    display:block;
+    z-index: 100; 
+  }
+}
 @media(max-width: $smDesktopWidth) {
   .page4-content{
     height:630px;

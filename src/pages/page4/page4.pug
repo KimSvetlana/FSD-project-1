@@ -6,6 +6,8 @@ block variables
 	- var pageClass = 'page4';
 
 block content
-	div.container(class="page4-content")   
-		include ../../blocks/loginForm/LoginForm
-		include ../../blocks/accountRegistrationForm/accountRegistrationForm
+	div.container(class="page4-content")
+		.login-form-wrap 
+			include ../../blocks/loginForm/LoginForm
+		.registration-form-wrap
+			include ../../blocks/accountRegistrationForm/accountRegistrationForm
