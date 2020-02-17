@@ -14,7 +14,7 @@ block content
 		.content__filter-menu
 			.menu-group__datepicker
 				h3.menu-group__title_h3.datepicker даты пребывания в отеле
-				input(type="text" class="filter__datepicker сheck-in" id="dateFrom" placeholder="ДД.ММ.ГГГГ")
+				input(type="text" data-range="true" data-multiple-dates-separator=" - " class="datepicker_input  сheck-in filter__datepicker" placeholder="ДД.ММ - ДД.ММ")
 			.menu-group__guests
 				h3.menu-group__title_h3.guests гости
 				include ../../blocks/dropdown/dropdown

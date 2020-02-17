@@ -13,3 +13,4 @@ $('.expandable-checkbox-list > li').on('click', function(){
         var icon = $('#checkbox-icon');
         icon.toggleClass('open');
 });
+
