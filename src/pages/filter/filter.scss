@@ -73,24 +73,24 @@
 .menu-group__title_h3.comfort {
     margin-bottom: 4px;
 }
-.menu-group__checkbox-list {
-    padding-right: 10px;
-    margin-top: 30px;
-}
-.expandable-checkbox-list {
-    float:left;
-}
-.checkbox-list__icon{
-    float: right;
-    margin-top: -4px;
-    color:rgba(31, 32, 65, 0.5);
-    transform: rotate(0deg);
-    transition: transform 0.5s linear;
-}
-.checkbox-list__icon.open{
-    transform: rotate(180deg);
-    transition: transform 0.5s linear;
-}
+// .menu-group__checkbox-list {
+//     padding-right: 10px;
+//     margin-top: 30px;
+// }
+// .expandable-checkbox-list {
+//     float:left;
+// }
+// .checkbox-list__icon{
+//     float: right;
+//     margin-top: -4px;
+//     color:rgba(31, 32, 65, 0.5);
+//     transform: rotate(0deg);
+//     transition: transform 0.5s linear;
+// }
+// .checkbox-list__icon.open{
+//     transform: rotate(180deg);
+//     transition: transform 0.5s linear;
+// }
 .filter-page__content {
     min-height: 1357px;
     display: flex;
